@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grand Theft Auto VI Guide</title>
+<meta name="description" content="A Leonida field guide for Grand Theft Auto VI: Ultimate Edition unlocks, story, collectibles, vehicles, weapons, and more.">
+<style>
+:root{--bg:#0a0714;--panel:#161022;--panel2:#1c1630;--ink:#f6f1ff;--muted:#b9aecf;--line:#3d2f5a;--pink:#ff2d95;--pink2:#ff6bb5;--cyan:#26e0d4;--gold:#f5d36c;--done:#3ecf8e;--warn:#ff6b6b}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg) radial-gradient(ellipse at 20% 0,#2a1040 0%,#0a0714 55%) fixed;color:var(--ink);font:16px/1.55 "Segoe UI",system-ui,-apple-system,sans-serif}
+header{text-align:center;padding:26px 16px 12px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(255,45,149,.12),transparent)}
+h1{margin:0;font-size:clamp(1.55rem,5vw,2.7rem);letter-spacing:.08em;text-transform:uppercase;color:#fff;text-shadow:0 0 18px rgba(255,45,149,.55),0 0 28px rgba(38,224,212,.25)}
+header p{margin:8px 0 0;color:var(--muted);font-style:italic}
+.banner{max-width:820px;margin:14px auto 0;padding:10px 14px;border:1px solid var(--cyan);border-radius:8px;background:rgba(38,224,212,.08);color:var(--ink);font-size:.95rem;text-align:left}
+.banner b{color:var(--cyan)}
+.progress{max-width:1100px;margin:14px auto 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center}
+.bar{flex:1 1 220px;max-width:420px;height:14px;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.bar>div{height:100%;background:linear-gradient(90deg,var(--pink),var(--cyan));width:0;transition:width .3s}
+#progText{color:var(--gold);font-weight:bold}
+.gsearch{max-width:640px;margin:12px auto 0;display:flex}
+.gsearch input{flex:1}
+nav{position:sticky;top:0;z-index:5;background:#0c0814f2;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:center;gap:4px;padding:8px;backdrop-filter:blur(8px)}
+nav button,.chip,.btn{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:7px 12px;border-radius:6px}
+nav button[aria-selected=true],.chip.on{background:linear-gradient(90deg,var(--pink),#c41a7a);border-color:var(--pink2);color:#fff}
+.btn.reset{background:transparent;color:var(--pink2);border-color:var(--pink)}
+.btn.small{padding:4px 10px;font-size:.85rem}
+main{max-width:1100px;margin:0 auto;padding:18px 14px 60px}
+section.tab{display:none}section.tab.active{display:block}
+h2{font-size:1.6rem;margin:6px 0 12px;color:var(--cyan);border-bottom:1px solid var(--line);padding-bottom:6px;letter-spacing:.04em}
+h3{color:var(--gold);margin:18px 0 8px;font-size:1.15rem}
+.card h3{margin-top:0}
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+input[type=search],select{font:inherit;flex:1 1 220px;min-width:0;padding:8px 12px;border-radius:6px;border:1px solid var(--line);background:#0c0814;color:var(--ink)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-left:4px solid var(--pink);border-radius:8px;padding:12px 14px}
+.card.found{border-left-color:var(--done);opacity:.75}
+.card .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.card h4{margin:0;font-size:1.08rem}
+.tag{display:inline-block;font-size:.78rem;color:var(--gold);border:1px solid var(--line);border-radius:10px;padding:1px 8px;margin:3px 4px 0 0}
+.tag.ok{color:#0a0714;background:var(--done);border-color:var(--done)}
+.tag.warn{color:#fff;background:#8a2a2a;border-color:var(--warn)}
+.tag.ch{color:#0a0714;background:var(--cyan);border-color:var(--cyan)}
+.tag.ult{color:#fff;background:var(--pink);border-color:var(--pink2)}
+.card dl{margin:8px 0 0}.card dt{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-top:6px}.card dd{margin:0}
+label.found-cb{white-space:nowrap;font-size:.85rem;color:var(--muted);display:flex;gap:5px;align-items:center;cursor:pointer}
+label.found-cb input{width:18px;height:18px;accent-color:var(--done)}
+.note{background:var(--panel);border:1px dashed var(--line);border-radius:8px;padding:10px 14px;color:var(--muted);margin:14px 0}
+.note.warn{border-color:var(--pink);color:var(--ink)}
+.note.ok{border-color:var(--cyan);color:var(--ink)}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:8px 0 0}
+ol.steps li{counter-increment:s;position:relative;padding:0 0 14px 44px}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:linear-gradient(180deg,var(--pink),#c41a7a);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold}
+ol.steps li b{display:block}
+details{margin-top:8px}summary{cursor:pointer;color:var(--gold)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:10px 0}
+table{border-collapse:collapse;width:100%;background:var(--panel)}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#241832;color:var(--gold);font-weight:normal;text-transform:uppercase;font-size:.8rem;letter-spacing:.05em}
+td code{font-family:Consolas,Menlo,monospace;color:var(--cyan)}
+ul{margin:0;padding-left:20px}li{margin-bottom:4px}
+a{color:var(--cyan)}
+.empty{color:var(--muted);font-style:italic}
+.row{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .t{flex:1}.row .t small{display:block;color:var(--muted)}
+.row.found .t{opacity:.6;text-decoration:line-through}
+.res-tab{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+#searchResults{display:none}
+body.searching section.tab{display:none!important}
+body.searching #searchResults{display:block}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:20px}
+.toggles{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0 14px}
+.toggles label{display:flex;gap:6px;align-items:center;cursor:pointer;color:var(--muted)}
+@media (max-width:600px){body{font-size:15px}.cards{grid-template-columns:1fr}nav{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start}nav button{flex:0 0 auto;padding:6px 9px;font-size:.9rem}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Grand Theft Auto VI</h1>
+  <p>A Leonida field guide: Ultimate Edition unlocks, story, collectibles, vehicles, weapons, and more.</p>
+  <div class="banner"><b>Released November 19, 2026</b> on PlayStation 5 and Xbox Series X|S. There is no PC version at launch. This guide was compiled on November 23, 2026, four days after release, so some collectible maps and cheat codes are still being finished by major outlets. Everything here is tagged <b>Confirmed</b> or <b>Reported / unconfirmed</b>. When guides disagree, both figures are shown.</div>
+  <div class="progress">
+    <span id="progText">0 / 0 found</span>
+    <div class="bar"><div id="progBar"></div></div>
+    <button class="btn reset" id="resetBtn">Reset progress</button>
+  </div>
+  <div class="gsearch"><input type="search" id="globalSearch" placeholder="Search everything (e.g. Grotti Cheetah, Cartel Heist, WAiNK, BuckMe)" aria-label="Search the whole guide"></div>
+</header>
+<nav role="tablist" id="nav"></nav>
+<main>
+  <section id="searchResults"><h2>Search results</h2><div id="resultsList"></div></section>
+
+  <section class="tab" id="tab-start">
+    <h2>Start Here</h2>
+    <div class="note ok">Grand Theft Auto VI launched worldwide on November 19, 2026, for PlayStation 5 (including PS5 Pro Enhanced) and Xbox Series X|S. It is sold at the PlayStation Store, Microsoft Store, Rockstar Games Store, and retailers. Standard Edition is $79.99; Ultimate Edition is $99.99; a $20 Ultimate Edition Upgrade is sold separately. In-game purchases are optional. Online features need a platform account.</div>
+    <h3>Jason and Lucia</h3>
+    <div class="grid2">
+      <div class="card"><h3>Jason Duval</h3><p>Official PlayStation Blog bio: Jason grew up around grifters and crooks. After a stint in the Army trying to shake off his troubled teens, he found himself in the Keys working for local drug runners. Meeting Lucia could be the best or worst thing to ever happen to him.</p></div>
+      <div class="card"><h3>Lucia Caminos</h3><p>Official PlayStation Blog bio: Lucia’s father taught her to fight as soon as she could walk. Fighting for her family landed her in the Leonida Penitentiary. Sheer luck got her out, and she wants the good life her mom dreamed of since their days in Liberty City. She is prepared to take matters into her own hands.</p></div>
+    </div>
+    <div class="note">When an easy score goes wrong, Jason and Lucia end up in a criminal conspiracy stretching across the state of Leonida and have to rely on each other if they want to make it out alive.</div>
+    <h3>What to do first</h3>
+    <ol class="steps" id="nextSteps"></ol>
+    <h3>Facts worth knowing early</h3>
+    <ul>
+      <li>The story is five chapters. PowerPyx estimates 60–80 hours for the story and about 200 hours for the platinum / 100% route.</li>
+      <li>There is no mission replay. Keep a manual save at the start and end of each chapter (15 manual slots plus one autosave).</li>
+      <li>Free-roam continues after the credits. Nothing required for 100% completion is missable after the story.</li>
+      <li>One trophy may be missable: after Chapter 1’s Down to Earth, accept Lucia’s morning meditation at Jason’s house. See the 100% &amp; Trophies tab.</li>
+      <li>Cheats only unlock after you finish the story, and turning one on disables saving and trophies for that session.</li>
+      <li>Ultimate Edition bonuses are threaded through the chapters, not dumped at the start. Jason’s Enduro, kayak, and Ganado Retro Build are Chapter 1 only — use them before that chapter ends.</li>
+      <li>Bank cash in BuckMe. Pocket cash can be lost when you die or get busted.</li>
+      <li>You can switch between Jason and Lucia with Hold D-Pad Right + R1 (PS5) or RB (Xbox). Free switching opens in Chapter 2.</li>
+    </ul>
+  </section>
+
+  <section class="tab" id="tab-ultimate">
+    <h2>Ultimate Edition and Pre-Order</h2>
+    <div class="note">Official store copy says Ultimate Edition bonuses are “threaded across all aspects of Jason and Lucia’s story, with new items uncovered behind each chapter.” Check owned items and unlock conditions in the in-game Store menu. Standard Edition owners can buy the $20 Ultimate Edition Upgrade at any time. Exclusive shops still appear on the map without Ultimate, but their doors stay locked until you upgrade.</div>
+    <div class="controls"><div class="chips" id="ultFilter"></div><input type="search" id="ultSearch" placeholder="Search a vehicle, shop, weapon, or chapter"></div>
+    <div class="cards" id="ultCards"></div>
+    <h3>Vintage Vice City Pack (pre-order / early purchase)</h3>
+    <div class="note">This pack is not Ultimate-exclusive. Take-Two and PlayStation said purchases of either edition made before November 20, 2026 include the Vintage Vice City Pack. Digital PlayStation purchases on or before November 19 also include one month of GTA+ (claim by March 31, 2027; the Ultimate Edition Upgrade alone is not eligible). Rockstar has not said whether the pack will be sold separately later.</div>
+    <div class="cards" id="packCards"></div>
+    <h3>GTA+ in GTA VI (confirmed benefits)</h3>
+    <div class="note">GTA+ is $7.99 a month and renews until canceled. Bonuses only work while the membership is active and can be turned off in the Account menu. The list below follows Dot Esports’ post-launch breakdown.</div>
+    <div class="cards" id="gtaPlusCards"></div>
+  </section>
+
+  <section class="tab" id="tab-story">
+    <h2>Story Missions</h2>
+    <div class="note warn">Mission names and short summaries are mild spoilers. PC Gamer lists <b>91 story missions</b> across five chapters. PowerPyx numbers 116 main-story steps because it also counts short phone calls, waits, and payments. IGN’s early chapter lists include some interstitial missions (for example, Building a Life in Chapter 1). This list follows PC Gamer’s published story order. A few late-game names were withheld by those outlets and are marked Redacted here — they are not invented.</div>
+    <div class="toggles"><label><input type="checkbox" id="showSummaries" checked> Show short summaries</label></div>
+    <div class="controls"><div class="chips" id="storyFilter"></div><input type="search" id="storySearch" placeholder="Search a mission or chapter"></div>
+    <div id="storyBody"></div>
+  </section>
+
+  <section class="tab" id="tab-map">
+    <h2>The State of Leonida</h2>
+    <div class="note ok">The official PlayStation Blog names six regions: Vice City, the Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia, and Mount Kalaga. Challenges also refer to five counties on the in-game map: Vice-Dale, Leonard, Kelly, Mariana, and Lummox. Region-to-county borders are best checked on the in-game map; this guide does not invent a full town list.</div>
+    <div class="cards" id="regionCards"></div>
+    <h3>Places that come up often</h3>
+    <div class="note">These are locations named in official copy or in the guides used for this app, not a complete city directory.</div>
+    <div class="cards" id="placeCards"></div>
+  </section>
+
+  <section class="tab" id="tab-side">
+    <h2>Side Jobs and Strangers</h2>
+    <div class="note">PowerPyx treats Strangers &amp; Freaks as optional mission strands. Completing <b>8 strands</b> unlocks the Strangers &amp; Freaks trophy. Only certain strands count — check the trophy counter before and after a finale if you are unsure. Next missions often take in-game days or even a later chapter to appear (Kirk can start in Chapter 1 and finish in Chapter 2). All trophy-related strands remain available after the story. A few Chapter 1 jobs are missable and are not needed for 100% or the trophy. This list is from PowerPyx as of launch week and may still grow.</div>
+    <div class="controls"><div class="chips" id="sideFilter"></div><input type="search" id="sideSearch" placeholder="Search a stranger or mission"></div>
+    <div class="cards" id="sideCards"></div>
+  </section>
+
+  <section class="tab" id="tab-collect">
+    <h2>Collectibles</h2>
+    <div class="note warn">PowerPyx’s Progress Database is the source for the counts below. Many individual pins are still being mapped four days after launch, so this tab tracks <b>types and totals</b>, plus how to collect them — not a made-up list of every card or flamingo. Use the in-game Progress menu and a map that cites IGN or PowerPyx for exact pins. 100% completion only needs part of most collections; the required numbers are on each card and in the 100% tab.</div>
+    <div class="controls"><div class="chips" id="colFilter"></div><input type="search" id="colSearch" placeholder="Search a collectible type"></div>
+    <div class="cards" id="colCards"></div>
+  </section>
+
+  <section class="tab" id="tab-vehicles">
+    <h2>Vehicles</h2>
+    <div class="note">The Progress menu tracks <b>557 vehicles</b>: 277 base models and 280 Standout vehicles in fixed locations. 100% completion only requires scanning any 200 of the 277 base models with the WAiNK app (hold the scan control shown on screen). Also scan boats and aircraft. Standout vehicles do not count toward that 200. This tab covers how vehicles work, Ultimate and pre-order cars, and Wyman’s Classic Car Collection. It does not invent a list of all 277 base models.</div>
+    <div id="vehicleIntro"></div>
+    <h3>Ultimate, pre-order, and GTA+ vehicles</h3>
+    <div class="cards" id="vehBonusCards"></div>
+    <h3>Wyman’s Classic Car Collection (Ultimate Edition)</h3>
+    <div class="note">Push Square confirmed this starts after you collect the ’67 Vapid Dominator Buggy from Paradise Garage in Watson Bay in Chapter 2. Wyman texts you on WhatUp. Scan wrecks with WAiNK (track it under Exploration &gt; Find Cars for Wyman), then pay a $1,500 mechanic fee in the BuckMe app. Register the finished car at a Pay ’n’ Spray for $100 or park it in a garage; otherwise it is sent back to Wyman’s Auto Salvage (set a waypoint under Vehicles). Push Square had locations for four cars as of November 22 and marked the page as a work in progress. A fifth finished car is widely reported by fan wikis as a gift after the four rebuilds, but that was not in Push Square’s guide yet, so it is marked unconfirmed here.</div>
+    <div class="cards" id="wymanCards"></div>
+  </section>
+
+  <section class="tab" id="tab-weapons">
+    <h2>Weapons</h2>
+    <div class="note">PowerPyx lists <b>196 weapon entries</b> in the Progress menu: 53 guns, 9 melee, 4 explosives, and 130 variants. 100% completion needs any 50 of the 66 standard-issue weapons (the guns, melee, and explosives). Holding a weapon once is enough — buying is optional. Expanded Ammu-Nation stores (the word “Expanded” appears when you highlight the map icon) sell the full inventory, including grenade and rocket launchers. Unique named variants also appear in display cases; counts from major guides were still being reconciled at launch (PowerPyx 130 variants; IGN had documented 127 plus two Ultimate variants).</div>
+    <div class="cards" id="weaponCards"></div>
+    <h3>Ultimate Edition weapons</h3>
+    <div class="cards" id="ultWeaponCards"></div>
+  </section>
+
+  <section class="tab" id="tab-property">
+    <h2>Properties and Money</h2>
+    <div class="note">There are no buyable houses or passive-income businesses confirmed at launch. The purchasable real estate is garages, bought from the Vice City Real Estate phone app after Chapter 2’s Daily Driver (the app installs after you steal the Crawler for Moses). PowerPyx says the Little Boxes trophy needs the <b>8 purchasable garages</b>, which total $160,000. There are also 4 story-related garages and 1 collectible-reward garage; those are not required for the trophy. GameSpot’s November 18 garage article, written under pre-release restrictions, listed two different prices; those disagreements are noted on the cards.</div>
+    <div class="cards" id="garageCards"></div>
+    <h3>How to make money</h3>
+    <div id="moneyBody"></div>
+  </section>
+
+  <section class="tab" id="tab-secrets">
+    <h2>Secrets and Easter Eggs</h2>
+    <div class="note warn">Leonida is packed with references, and outlets are still finding more. This list only includes secrets described in GameSpot or Polygon articles opened for this guide. Locations that appeared only in unverified roundups (for example some UFO or movie-car claims) are left out. More will show up after launch week.</div>
+    <div class="controls"><div class="chips" id="secretFilter"></div><input type="search" id="secretSearch" placeholder="Search a secret"></div>
+    <div class="cards" id="secretCards"></div>
+  </section>
+
+  <section class="tab" id="tab-hundred">
+    <h2>100% Completion and Trophies</h2>
+    <div class="note">The in-game 100% checklist appears after the story under Progress &gt; Stats &gt; 100% Completion, but earlier progress already counts. PowerPyx calls it closer to 60% true completion: many side quests are optional, and most collectibles are only partially required. Finishing it unlocks the gold trophy / 100G achievement A Long Road. The lists below follow PowerPyx and the GamesRadar trophy list (55 awards: 1 Platinum, 2 Gold, 6 Silver, 46 Bronze). Use your in-game checklist if a later patch changes a number.</div>
+    <h3>100% checklist</h3>
+    <div id="hundredBody"></div>
+    <h3>Trophies and achievements</h3>
+    <div class="note warn">Positive Mental Attitude is the only potentially missable award. After Chapter 1 mission Down to Earth, talk to Lucia in the kitchen in the morning, follow her to the balcony, and Accept the meditation. PowerPyx and GamesRadar both say it is not yet 100% clear whether that house meditation is required for the 18-spot trophy, but it is safer to accept it. Cheats disable trophies. Difficulty does not: PlayStation lists accessibility assists (adjustable challenge, simplified QTEs, game speed), and PowerPyx says trophies are not tied to a difficulty mode.</div>
+    <div class="controls"><div class="chips" id="trophyFilter"></div><input type="search" id="trophySearch" placeholder="Search a trophy"></div>
+    <div class="cards" id="trophyCards"></div>
+  </section>
+
+  <section class="tab" id="tab-challenges">
+    <h2>Challenges</h2>
+    <div class="note">There are <b>80 challenges</b> in 8 categories of 10, all available from the start. Track them under Progress &gt; Challenges. Completing any 50 unlocks One Last Thing; any 70 of 80 are required for 100% completion, so you can skip the hardest 10. Wording below follows PowerPyx. GamesRadar lists the same 80; one Vehicle challenge disagrees on the unit (see Throttled).</div>
+    <div class="controls"><div class="chips" id="chFilter"></div><input type="search" id="chSearch" placeholder="Search a challenge"></div>
+    <div id="chBody"></div>
+  </section>
+
+  <section class="tab" id="tab-tips">
+    <h2>Tips and Controls</h2>
+    <div id="tipsBody"></div>
+    <h3>Controls (PlayStation 5 and Xbox)</h3>
+    <div class="note">The table follows TheGamer’s post-launch controls guide (November 22, 2026). Basic movement is the usual GTA layout: left stick to move, the bottom face button to sprint or jump, the top face button to enter or exit a vehicle. The game also has Control Reminders and Tutorial Reminders in its accessibility options.</div>
+    <div class="controls"><input type="search" id="controlSearch" placeholder="Search a control"></div>
+    <div class="tablewrap" id="controlTable"></div>
+  </section>
+
+  <section class="tab" id="tab-cheats">
+    <h2>Cheats</h2>
+    <div class="note warn">Polygon confirmed the cheat system on November 21, 2026, and had only published some of the D-pad sequences by then. There are 61 cheats in five categories. The Cheats menu appears only after you finish the story (Map &gt; Progression, then scroll to Cheats). Progress toward unlocks counts during the story. <b>Activating a cheat disables saving and trophies for the rest of that session</b> — save first. Enter a code from the phone: press D-Pad Up, hold L1 and R1 (LB and RB on Xbox, assumed by Polygon from the PS5 version), then enter the sequence. Codes are marked Confirmed only when Polygon published the inputs.</div>
+    <div class="controls"><div class="chips" id="cheatFilter"></div><input type="search" id="cheatSearch" placeholder="Search a cheat"></div>
+    <div class="tablewrap" id="cheatTable"></div>
+  </section>
+
+  <section class="tab" id="tab-sources">
+    <h2>Sources</h2>
+    <div class="note">This guide only uses information from the official pages and reputable outlets linked below, checked on November 23, 2026. Where two good sources disagree, both are quoted in the relevant tab. Fan maps and wikis were not used as the sole source for a location or a count.</div>
+    <div id="sourcesBody"></div>
+  </section>
+</main>
+<footer>Progress is saved in this browser only. Grand Theft Auto VI is a trademark of Take-Two Interactive. This is an unofficial fan guide.</footer>
+<script>
+(function(){
+  var KEY="gta6-guide-found-v1";
+  var found={};
+  try{found=JSON.parse(localStorage.getItem(KEY)||"{}")||{};}catch(e){found={};}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(found));}catch(e){}}
+  function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+  function $(id){return document.getElementById(id);}
+  var ITEMS=[];
+  function add(id,tab,title,text){ITEMS.push({id:id,tab:tab,title:title,text:text||""});}
+  function cb(id,label){return '<label class="found-cb"><input type="checkbox" data-id="'+esc(id)+'"'+(found[id]?" checked":"")+'> '+(label||"Found it")+'</label>';}
+  function row(id,title,sub){return '<div class="row'+(found[id]?" found":"")+'"><div class="t">'+esc(title)+(sub?'<small>'+esc(sub)+'</small>':"")+'</div>'+cb(id,"Done")+'</div>';}
+  function tag(t,cls){return t?'<span class="tag'+(cls?" "+cls:"")+'">'+esc(t)+'</span>':'';}
+  function statusTag(s){return s==="Confirmed"?tag("Confirmed","ok"):s==="Chapter 1 only"?tag("Chapter 1 only","ch"):tag(s||"Reported / unconfirmed","warn");}
+  function stepsHtml(arr){return '<ol class="steps">'+arr.map(function(s){return typeof s==="string"?'<li>'+esc(s)+'</li>':'<li><b>'+esc(s[0])+'</b>'+esc(s[1])+'</li>';}).join("")+'</ol>';}
+  function match(q,fields){q=(q||"").trim().toLowerCase();if(!q)return true;return fields.some(function(f){return String(f||"").toLowerCase().indexOf(q)>=0;});}
+  function chips(el,opts,cur,onPick){if(!el)return;el.innerHTML=opts.map(function(o){return '<button type="button" class="chip'+(o.v===cur?" on":"")+'" data-v="'+esc(o.v)+'">'+esc(o.l)+'</button>';}).join("");el.onclick=function(e){var b=e.target.closest("[data-v]");if(b)onPick(b.getAttribute("data-v"));};}
+
+  var TABS=[
+    ["start","Start Here",null],
+    ["ultimate","Ultimate","ue:,pk:,gp:"],
+    ["story","Story","m:"],
+    ["map","Map",null],
+    ["side","Side Jobs","st:"],
+    ["collect","Collectibles","col:"],
+    ["vehicles","Vehicles","wv:"],
+    ["weapons","Weapons","wp:"],
+    ["property","Property","g:"],
+    ["secrets","Secrets","s:"],
+    ["hundred","100%","pct:,tr:"],
+    ["challenges","Challenges","ch:"],
+    ["tips","Tips",null],
+    ["cheats","Cheats","cht:"],
+    ["sources","Sources",null]
+  ];
+  var TABNAME={};TABS.forEach(function(t){TABNAME[t[0]]=t[1];});
+
+  var NEXT_STEPS=[
+    ["Save often, on purpose","There is no mission replay. Use the 15 manual slots: keep a save at the start and end of each chapter, then rotate the rest for free-roam."],
+    ["Claim Ultimate bonuses as chapters open","They are not all waiting in the first hour. Jason’s Dinka Enduro, Crest Kayak, and Ganado Retro Build can only be used in Chapter 1."],
+    ["Accept Lucia’s meditation","After Down to Earth, follow her to the balcony in the morning and Accept. It may be required for Positive Mental Attitude."],
+    ["Open a BuckMe account and bank your cash","Pocket money can be lost when you die or get busted. The early mission Buck Me walks you through banking."],
+    ["Start scanning early","Use WAiNK on new vehicles and binoculars on animals. 100% only needs 200 of 277 base vehicles and 100 of 255 animals."],
+    ["Do optional jobs when they appear","Purple icons and black icons with pink letters count toward the 100 optional tasks. There are far more than 100, so missable early jobs are not a crisis."]
+  ];
+
+  var ULTIMATE=[
+    {id:"jason-vehicles",name:"Jason’s Safehouse Vehicles",cat:"Vehicles",ch:"Chapter 1",status:"Chapter 1 only",where:"Jason’s safehouse in the Leonida Keys.",how:"Pick up the Army-fatigue Dinka Enduro motorcycle and the Crest Kayak at the house. Dot Esports and TheGamer both say these are only available during Chapter 1 — use them before the chapter ends.",get:"An Army fatigue-tinged Dinka Enduro and a Crest Kayak."},
+    {id:"ganado",name:"Ganado Retro Build",cat:"Vehicles",ch:"Chapter 1",status:"Chapter 1 only",where:"Coastal Auto Care in Key Lento, under Pro Builds / Full Kits.",how:"Apply exclusive muscle and classic styling mods to Jason’s well-worn Vapid Ganado low-riding pickup. Only usable in Chapter 1.",get:"Exclusive mods for Jason’s Vapid Ganado."},
+    {id:"es9",name:"Personalized Girardi ES9 (Jason)",cat:"Weapons",ch:"Chapter 1",status:"Confirmed",where:"Variants section of the weapon locker in any Ammu-Nation.",how:"Jason’s engraved sidearm is available from Chapter 1. Lucia’s matching unlock is in Chapter 2.",get:"An engraved variant of Jason’s Girardi ES9 pistol."},
+    {id:"k17",name:"Personalized Klose K17 (Lucia)",cat:"Weapons",ch:"Chapter 2",status:"Confirmed",where:"Variants section of the weapon locker in any Ammu-Nation.",how:"Lucia’s engraved sidearm unlocks in Chapter 2, when you can play as her more freely.",get:"An engraved variant of Lucia’s Klose K17 pistol."},
+    {id:"morgan",name:"Hawk and Little Morgan Revolvers",cat:"Weapons",ch:"Chapter 2",status:"Confirmed",where:"Weapon locker in any Ammu-Nation.",how:"His-and-hers revolvers with classic Vice City styling, sourced from the Vercetti Estate: palm-tree-etched grips, engraved detailing, and a high-performance scope.",get:"Hawk and Little Morgan revolvers for Jason and Lucia."},
+    {id:"goodtime",name:"Goodtime Gear",cat:"Looks",ch:"Chapter 1",status:"Confirmed",where:"Mannequins at The Wonder Whale in Key Lento (Style / Souvenir & Swimwear).",how:"A capsule of apparel and accessories inspired by Macca the Gator, the hit TV-show character of the Goodtime State. Available from Chapter 1.",get:"Macca the Gator apparel and accessories."},
+    {id:"rideout",name:"Rideout Customs",cat:"Shops",ch:"Chapter 1",status:"Confirmed",where:"Crosstown, Vice City (Vehicles / Mod Shops).",how:"Transform ordinary vehicles with detailed interiors, exquisite rims, and donk stylings. Open from Chapter 1 for Ultimate owners; otherwise the door stays locked.",get:"An exclusive mod shop for interiors, rims, and donks."},
+    {id:"sara",name:"Sara’s Unisex Salon",cat:"Shops",ch:"Chapter 1",status:"Confirmed",where:"Cicada Avenue, Hamlet (Style / Hair & Beauty).",how:"Signature styles for both characters, including facial hair for Jason and makeup and nails for Lucia. The shop opens in Chapter 1; TheGamer and Dot Esports say the signature looks unlock in Chapter 2.",get:"Exclusive salon styles for Jason and Lucia."},
+    {id:"stock305",name:"Stock 305",cat:"Shops",ch:"Chapter 1",status:"Confirmed",where:"Stockyard, Vice City (Style / Casual & Street).",how:"Stockyard’s destination for elevated streetwear, with unique and exclusive looks for both characters. Open from Chapter 1.",get:"Exclusive streetwear for Jason and Lucia."},
+    {id:"fang",name:"Electric Fang Tattoo",cat:"Shops",ch:"Chapter 1",status:"Confirmed",where:"Stockyard, Vice City (Style / Tattoos).",how:"More than 50 signature tattoos for both characters, designed by the artist collective FAILE. Open from Chapter 1.",get:"50+ FAILE tattoos at Stockyard’s ink bar."},
+    {id:"willie",name:"One-Eyed Willie’s",cat:"Shops",ch:"Chapter 1",status:"Confirmed",where:"North Leonard County, above Lake Leonida (Vehicles / Mod Shops).",how:"Lake Leonida’s storied mod shop for off-road modifications and hand-painted automotive artistry. Open from Chapter 1.",get:"Off-road mods and hand-painted vehicle art."},
+    {id:"ptt",name:"PTT Youngin$ Compound",cat:"Action",ch:"Chapter 1",status:"Confirmed",where:"Southside, Vice City, after you have explored South Vice-Dale / Southside. Listed under Robberies / Illegal Operations.",how:"Raid the compound of one of Southside Vice City’s loudest, most socially active gangs and escape with special items and distinct contraband. TheGamer says visit South Vice-Dale County first, then the robbery appears in Southside.",get:"A unique compound robbery with special contraband."},
+    {id:"dominator",name:"’67 Vapid Dominator Buggy and Paradise Garage",cat:"Vehicles",ch:"Chapter 2",status:"Confirmed",where:"Paradise Garage in Watson Bay, after visiting the Mud Club with Wyman (an Exploration task).",how:"A Mud Club off-roader for the backwoods of Mount Kalaga and beyond. The garage has a weapon locker and a secure place to deposit stolen goods to be fenced. Collecting it also starts the Classic Car Collection.",get:"The ’67 Vapid Dominator Buggy plus Paradise Garage in Watson Bay."},
+    {id:"classic",name:"Classic Car Collection (Wyman)",cat:"Vehicles",ch:"Chapter 2",status:"Confirmed",where:"Wyman contacts you on WhatUp after you collect the Dominator. Track wrecks under Exploration > Find Cars for Wyman.",how:"Track down abandoned classics and project cars and restore them for eccentric collector and fixer Wyman. See the Vehicles tab for the wreck locations Push Square had confirmed by November 22.",get:"A commission to find and restore classic project cars."},
+    {id:"style",name:"Vice City Style",cat:"Looks",ch:"Chapter 4",status:"Confirmed",where:"From Chapter 4, a few missions in: outfits in your wardrobe, tattoos in the Special section of most parlors, hair and beards at Sara’s Unisex Salon.",how:"Exclusive outfits, hairstyles, tattoos, and more for Jason and Lucia, whether poolside or side by side.",get:"Exclusive outfits, hair, and tattoos."},
+    {id:"squalo",name:"Shitzu Squalo",cat:"Vehicles",ch:"Chapter 4",status:"Confirmed",where:"A canal dock at Washington Beach / Vice Beach, listed under Personal in the map index.",how:"A gradient pink-and-blue Squalo, open-ocean-ready, with an explosives-laden weapons crate. Official copy says it is perfect for casting in Gambit Bay.",get:"A unique boat with an explosives crate."},
+    {id:"cheetah",name:"’95 Grotti Cheetah",cat:"Vehicles",ch:"Chapter 5",status:"Confirmed",where:"Pegassi Residences parking garage, through an Exploration task.",how:"Grotti’s mid-’90s sports car and ode to Shore Drive, with a minimalist retro-futuristic livery. Official copy says it is “available to punctuate later-stage action.” This is the last Ultimate vehicle to unlock.",get:"A white mid-’90s Grotti Cheetah with a retro livery."}
+  ];
+
+  var PACK=[
+    {id:"stanier",name:"’55 Vapid Stanier and Shore Court Garage",ch:"Chapter 3",where:"Collect the Stanier through an Exploration task. TheGamer says to head to the Ocean View Hotel in Vice Beach to unlock the clothes, garage, and hairstyles. Dot Esports says everything in the pack unlocks once you collect the Stanier.",how:"A timeless two-tone ’55 Vapid Stanier sedan and the Shore Court personal garage near Ocean Beach, with a weapon locker and a stash for fencing stolen goods.",get:"The ’55 Stanier plus Shore Court garage."},
+    {id:"vc-outfits",name:"Vintage outfits and hairstyles",ch:"Chapter 3",where:"Unlocks after you collect the Stanier. Outfits are in your wardrobe; hairstyles are in the Special section of any salon.",how:"Official and post-launch guides describe a pastel linen suit and an ’80s haircut for Jason, and a red sequin mini dress and curls for Lucia, evoking Ocean Beach’s excess.",get:"Retro outfits and hairstyles for both characters."},
+    {id:"vc-wrap",name:"Exclusive tropical weapon pattern",ch:"Chapter 3",where:"Ammu-Nation modify menu, under Cosmetics / Wraps, after you find the Stanier.",how:"An iconic weapon pattern that echoes Tommy Vercetti’s palm-tree shirt, usable on most guns.",get:"A tropical print weapon wrap."}
+  ];
+
+  var GTAPLUS=[
+    {id:"elegy",name:"Venturas BLVD Elegy and garage",text:"A tuned ’90 Annis Venturas BLVD Elegy with an exclusive widebody, plus a single-car garage in Crosstown with a weapon locker and direct fencing. Available in Chapter 3 while GTA+ is active."},
+    {id:"transit",name:"Transit Service bonuses",text:"Scooter Bros Premium vehicle care, premium RydeMe rideshare membership, free scooter, bike, and Seashark rentals, and free rides on Leonida public transport. Fares are waived when you travel."},
+    {id:"sell",name:"Increased sell value",text:"10 percent more for eligible owned vehicles sold at any Pay ’n’ Spray, from Chapter 2."},
+    {id:"discounts",name:"Store discounts",text:"10 percent off at select businesses across Leonida, including weapon and clothing shops, hairdressers, tattooists, and vehicle mod shops. Applied automatically."}
+  ];
+
+  var CHAPTERS=[
+    {id:"c1",num:1,name:"Just Like Paradise",trophy:"Just Like Paradise (complete Gone Fishing) / Paradise Lost (complete Chapter 1)"},
+    {id:"c2",num:2,name:"Paradise Lost",trophy:"Tits Ass Drug Money (complete Chapter 2)"},
+    {id:"c3",num:3,name:"Tits Ass Drug Money",trophy:"Vice City, Baby! (complete Chapter 3)"},
+    {id:"c4",num:4,name:"Vice City, Baby",trophy:"Top Of The World, Ma (complete Chapter 4)"},
+    {id:"c5",num:5,name:"Top of the World, Ma",trophy:"You Gotta Know When to Get Off (complete the final mission)"}
+  ];
+
+  var MISSIONS=[
+    [1,"Prologue","Lucia meets with her counselor."],
+    [1,"Gone Fishing","Jason and Donnie do some smuggling."],
+    [1,"Gear Up","Jason buys a longarm."],
+    [1,"Just A Scratch","Jason gets his Ganado repaired."],
+    [1,"Lab Fees","Jason collects some rent."],
+    [1,"Unwanted Attention","Cal and Jason head to Hamlet."],
+    [1,"Pipework","Jason does some DIY."],
+    [1,"Hey Arnold!","Brian, Jason, and Cal track down a broker."],
+    [1,"Island Dreams","Jason goes diving."],
+    [1,"Feng Shui","Jason and Cal move furniture."],
+    [1,"Coming Home","Lucia enters the story in a bigger way."],
+    [1,"Buck Me","Jason and Lucia do some banking."],
+    [1,"Clean Up After Donnie","Jason retrieves a package. PC Gamer lists this after Buck Me; IGN says Lucia’s bank call arrives as this mission ends, so some play-order lists swap the two."],
+    [1,"Down to Earth","Jason and Lucia do some smuggling. After this, accept Lucia’s morning meditation at the house."],
+    [1,"Clear Skies","Jason and Donnie visit some bikers."],
+    [1,"Day Release","Mattia, Jason, and Lucia have a night out."],
+    [1,"Swamped","Jason, Brian, and Lorrie meet the Kingfishers."],
+    [1,"(Name redacted by major guides)","PC Gamer withheld this Chapter 1 mission name. IGN’s Chapter 1 count is higher because it includes short steps such as Building a Life.",1],
+    [1,"Recalibration","Jason and Lucia hang with Cal."],
+    [1,"Tourist Trap","Jason and Lucia do a pick-up job."],
+    [1,"Home Sweet Home","Lucia returns."],
+    [1,"Discharge Time","Lucia checks on Jason."],
+    [2,"What's in the Bag?","Welcome to Port Gellhorn."],
+    [2,"Ambulance Chaser","Lucia disposes of an ambulance."],
+    [2,"Just Moved In","Lucia goes shopping."],
+    [2,"Girls' Trip","Lucia makes a friend."],
+    [2,"Moses","Lucia gets a slim jim. Unlocks Moses and, after related jobs, the Scooter Bros app."],
+    [2,"Daily Driver","Lucia steals a vehicle (the Crawler for Moses). Unlocks the Vice City Real Estate app so you can buy garages."],
+    [2,"Slam Dunk","Dunk and Lucia team up."],
+    [2,"Breakfast Run","Jason and Lucia go for waffles. Unlocks the Trust trophy."],
+    [2,"Coffee Break","Jason and Lucia make plans."],
+    [2,"Afternoon Delight","Jason and Lucia visit a strip club."],
+    [2,"Checking Out","Jason and Lucia plan ahead."],
+    [3,"Welcome to Vice City","Jason and Lucia meet Dre'Quan."],
+    [3,"Dealer's Choice","Jason does a drug deal."],
+    [3,"Meet the Heders","Jason and Lucia have a double date. Play order can differ; some missions in this chapter open in parallel."],
+    [3,"Dubious Provenance","Jason and Lucia go to an antique store."],
+    [3,"Mami Knows Best","Lucia meets a family member."],
+    [3,"South Leonida Real Estate","Lucia has a run-in with M7. Some play-order guides place this later in the chapter."],
+    [3,"Tyrone","Jason asks Tyrone for work. Some lists fold this into Here, Kitty Kitty."],
+    [3,"Here, Kitty Kitty","Jason looks for Charles."],
+    [3,"Car Services","Lucia does another grand theft auto."],
+    [3,"Top Billing","Jason, Lucia, and Dre'Quan see a concert."],
+    [3,"Boobie Time","Jason drives Boobie around."],
+    [3,"First Impressions","Jason and Lucia meet Raul."],
+    [3,"Caught Slipping","Jason and Lucia prevent a burglary."],
+    [3,"Crosstown Traffic","Lucia tails a gang member."],
+    [3,"Credit Check","Raul invites Jason and Lucia to his base. Unlocks the Dye Pack Jammer needed to fence marked bills from banks."],
+    [3,"Steal the Zorruso for Randy","Jason and Lucia steal a high-end car. PowerPyx also titles related work Clonin' Keys, Makin' Gs."],
+    [3,"Sinfrontera National Bank","Jason and Lucia prep a heist."],
+    [3,"Security Expert","Jason and Lucia meet Nicole."],
+    [3,"Ride or Die","Jason helps out Dre'Quan."],
+    [3,"Company Property","Jason and Lucia help with a weapons shipment."],
+    [3,"The Missing Link","Lucia goes to a cockfight."],
+    [3,"Safe Word","Lucia learns a new skill."],
+    [3,"Cooties","Lucia makes a music video."],
+    [3,"Bricked Up","Jason and Lucia do some work for Boobie."],
+    [3,"Hidden Charges","Jason and Lucia do some prep work."],
+    [3,"The Cartel Heist","Jason and Lucia rob a bank. Unlocks the Break the Bank trophy. IGN and PowerPyx also count Yasmani’s Jewelry Jobs as a main step; PC Gamer leaves it off this list and treats it as a side strand."],
+    [4,"Ocean Beach","Jason and Lucia set up shop."],
+    [4,"Another Life","Lucia thinks about her past."],
+    [4,"Company Cars","Jason and Lucia get new wheels."],
+    [4,"Lawyer Up","Jason and Lucia meet a lawyer."],
+    [4,"Party Hard","Jason and Lucia run security for a celeb."],
+    [4,"Heavy Lifting","Jason and Lucia make a delivery."],
+    [4,"Photo/Shoot","Jason, Lucia, and Dre'Quan do a photoshoot."],
+    [4,"Making Gainz","Lucia gets to know someone."],
+    [4,"Watch It","Jason and Dre'Quan meet a club owner."],
+    [4,"Cash Injections","Lucia helps an associate."],
+    [4,"Amateur Hour","Lucia helps Cisco confront a porn director."],
+    [4,"Dirty Work","Lucia and Jason make new inroads."],
+    [4,"Too Much Baggage","Jason does some airport baggage handling."],
+    [4,"Adventures in Babysitting","Jason works nightclub security."],
+    [4,"Fresh Evidence","Jason and Dre'Quan steal blackmail material."],
+    [4,"Power Play","Jason gathers intel."],
+    [4,"Child's Play","Jason and Lucia help an acquaintance. Unlocks the Family Matters trophy."],
+    [4,"Headliners","The Dimez perform at VYB. Unlocks the DWNFALL trophy."],
+    [4,"Close Surveillance","Jason uses a spy drone."],
+    [4,"Delivery Method","Jason goes undercover."],
+    [4,"Team Building","Lucia proves herself."],
+    [4,"Fully Catered","Jason and Lucia steal a vehicle."],
+    [4,"VCIA Takedown","The heist is a go. Unlocks the Hi-Jacked trophy."],
+    [4,"Sunset","Jason and Lucia look for answers."],
+    [4,"(Name redacted by major guides)","PC Gamer withheld this late Chapter 4 mission name.",1],
+    [5,"Bird in the Hand","Jason and Lucia boost a ride."],
+    [5,"Taking Liberties","A new plan is made."],
+    [5,"VC Baby","Someone asks for help."],
+    [5,"Doggie Bag","A hunt for contraband."],
+    [5,"Operation Savage Glory","A shipment is recovered. Unlocks the Snow Storm trophy."],
+    [5,"Protective Custody","The couple work together."],
+    [5,"(Finale name redacted by major guides)","PC Gamer withheld the finale’s name. Completing it unlocks You Gotta Know When to Get Off.",1]
+  ];
+
+  var REGIONS=[
+    {name:"Vice City",blurb:"Official: the glamour, hustle, and greed of America in a single city. Neighborhoods run from the pastel art-deco hotels and white sands of Ocean Beach to the panaderías of Little Cuba, the bootleg brands of the Tisha-Wocka flea market, and VC Port, the cruise-ship capital of the world. “We’re a long way from the ’80s, but Vice City is still the sun and fun capital of America.”",notes:"Guides place Vice City in Vice-Dale County. Frequently mentioned areas include Ocean Beach, Vice Beach, Washington Beach, Washington Island, Little Cuba, Stockyard, Hamlet, Crosstown, Tequesta, Salton, Southside, Starfish Island, Capri, and Vice City International Airport (VCIA)."},
+    {name:"Leonida Keys",blurb:"Official: life in this tropical archipelago isn’t flashy but it’s easy. Get your buzz on and pull up a deck chair — you are on the doorstep of some of the most beautiful and dangerous waters in America.",notes:"Chapter 1 is based here, including Jason’s safehouse. Key Lento and Watson Bay come up often in guides (Push Square puts both in Mariana County). Kenton’s dive shop is in Key Lento."},
+    {name:"Grassrivers",blurb:"Official: you never know what lies beneath the surface of this primordial expanse. The gators may be the most famous attraction, but there are far deadlier predators and weirder discoveries among the mangroves.",notes:"Gullet Marsh, used in the Skunk Ape / Bigfoot encounter and a “giant enemy crab” side beat, sits in this swampy part of the state."},
+    {name:"Port Gellhorn",blurb:"Official: cheap motels, shut-down attractions, and empty strip malls won’t bring the tourists back, but there’s a new economy in this once-popular vacation spot, fueled by malt liquor, painkillers, and truck-stop energy drinks.",notes:"Chapter 2 is based here. GameSpot and others place the Starlet Motel rent stretch in this chapter. Moses’ garage, Gellhorn International Raceway, and several Wyman wrecks are in or around town. Guides place the area in Kelly County."},
+    {name:"Ambrosia",blurb:"Official: in the heart of Leonida, American industry and old-school values still reign supreme — whatever the cost. The Allied Crystal sugar refinery provides the jobs; the local biker gang provides almost everything else.",notes:"PC Gamer recommends the demolition derby at Ambrosia Raceway as a repeatable payout. Wyatt Motors and Store ’N’ Bolt garages are in town."},
+    {name:"Mount Kalaga",blurb:"Official: a national landmark on the state’s northern border, with prime hunting, fishing, and off-road trails. In the surrounding backwoods, hillbilly mystics and paranoid radicals live far from the prying eyes of government.",notes:"Guides place this in Lummox County. Bret Vogel’s hunting jobs are based in this northern country. The Ultimate ’67 Dominator Buggy is sold as an off-roader for these backwoods. GameSpot noted there are no purchasable garages in Lummox County."}
+  ];
+
+  var PLACES=[
+    {name:"Ocean Beach / Vice Beach",text:"The pastel hotel strip named in official copy and the Vintage Vice City Pack (Shore Court garage, Ocean View Hotel). In The Beginning… is earned by enjoying a cocktail with a view here."},
+    {name:"Stockyard",text:"Home to Ultimate-exclusive Stock 305 and Electric Fang Tattoo."},
+    {name:"Hamlet",text:"Sara’s Unisex Salon is on Cicada Avenue. Jason also comes here in Unwanted Attention."},
+    {name:"Crosstown",text:"Rideout Customs, and the GTA+ single-car garage, are here."},
+    {name:"Washington Beach / Washington Island",text:"The Shitzu Squalo docks at Washington Beach. Trinity Apartments, the Dexter reference, is on Washington Island near Vice Beach."},
+    {name:"Watson Bay",text:"Paradise Garage (Ultimate Dominator) and Donnie’s Auto Repair (a Reynolds Kit Car wreck is in the alley behind it)."},
+    {name:"Key Lento",text:"Jason’s early stomping ground, Coastal Auto Care (Ganado Retro Build), The Wonder Whale (Goodtime Gear), and Kenton’s dive shop."},
+    {name:"Southside, Vice City",text:"The PTT Youngin$ Compound robbery appears here after you explore the area."},
+    {name:"Lake Leonida / north Leonard County",text:"One-Eyed Willie’s off-road mod shop sits above the lake."},
+    {name:"VCIA (Vice City International Airport)",text:"The Chapter 4 VCIA Takedown heist, plus the Catch Me If You Can trophy for an “unscheduled departure.”"},
+    {name:"Leonida Penitentiary",text:"Named in Lucia’s official bio; she is recently out at the start of the story."},
+    {name:"Five counties",text:"Challenges such as Stick Up Spree, Rail Tour, Collectible Cards, and Basketball Tour require work in all five counties: Vice-Dale, Leonard, Kelly, Mariana, and Lummox."}
+  ];
+
+  var SIDES=[
+    {id:"merle",name:"Dr. Merle (No Flushers)",ch:"Any chapter",count:"Counts for Strangers & Freaks",trophy:"",jobs:"The Final Flush (meet at Frank’s Waffles).",notes:"PowerPyx marks this strand as counting toward the 8-strand trophy.",miss:false},
+    {id:"freddie",name:"Freddie",ch:"Any chapter",count:"Counts for Strangers & Freaks",trophy:"",jobs:"Retest Freddie’s Defenses.",notes:"PowerPyx marks this strand as counting.",miss:false},
+    {id:"shirley",name:"Shirley",ch:"Chapter 1",count:"Does not count",trophy:"",jobs:"Get Shirley’s Rum; Steal the Scooter.",notes:"Missable and Chapter 1 exclusive. Not needed for the trophy or for 100%.",miss:true},
+    {id:"kenton",name:"Kenton",ch:"Chapter 1",count:"Own trophy; S&F unconfirmed",trophy:"This Was No Boat Accident (final mission)",jobs:"Search the Dive Sites (Kenton Sets / shipwrecks). There are 7 sets; 100% completion needs 5 of 7.",notes:"Kenton runs a scuba-boat shop in Key Lento and sends you after underwater treasure. GameSpot and PC Gamer both call the dives lucrative once you finish a set. PowerPyx did not mark the strand as counting for Strangers & Freaks.",miss:false},
+    {id:"cal",name:"Cal",ch:"Chapter 1",count:"Does not count",trophy:"Baited My Tackle (beat Cal in a fishing challenge)",jobs:"Catch a Bigger Fish, plus later fishing challenges.",notes:"Cal is a Chapter 1 story friend. His fishing challenges also count as optional tasks.",miss:false},
+    {id:"kirk",name:"Kirk (Skunk Ape / Mr. Mangrove)",ch:"Chapter 1",count:"Counts for Strangers & Freaks",trophy:"",jobs:"Search for the Skunk Ape (Skunk Apeology 101) at night; Search for Tree Effigies; Help Kirk Find Mr. Mangrove (Advanced Skunk Apeonomics) — Lucia only, night only.",notes:"Can start in Chapter 1 and finish in Chapter 2. GameSpot and Polygon tie this to the Bigfoot / Skunk Ape encounter in Gullet Marsh.",miss:false},
+    {id:"kyle",name:"Kyle",ch:"Chapter 2",count:"Counts for Strangers & Freaks",trophy:"",jobs:"Check Out McKittrick Farm; Collect Chemicals for Kyle; Buddy? (Check on Kyle).",notes:"PowerPyx marks this strand as counting.",miss:false},
+    {id:"alvan",name:"Alvan",ch:"Chapter 2",count:"Counts for Strangers & Freaks",trophy:"",jobs:"Gellhorn’s Missing Tourists; Missing Person (Return to the Trophy Room).",notes:"PowerPyx marks this strand as counting.",miss:false},
+    {id:"moses",name:"Moses",ch:"Chapter 2",count:"Does not count",trophy:"On the Spot is a related trophy (register 10 vehicles on Scooter Bros)",jobs:"Steal Vehicles for Moses; Collect Moses’ Gift. The story missions Moses and Daily Driver introduce him.",notes:"Moses is in Port Gellhorn. He gives you a slim jim, buys certain stolen cars, and later ties into Scooter Bros vehicle registration. After Daily Driver you can buy garages.",miss:false},
+    {id:"bret",name:"Bret Vogel",ch:"Chapter 2",count:"Own trophy; S&F unconfirmed",trophy:"Fair Game (hunt a unique animal for Bret)",jobs:"Veteran Hunted (Meet Bret) — Jason only; then Bret’s Hunting Decks. 100% needs all 15 Target Decks.",notes:"Based in Lummox County. Jason-only hunting jobs. PC Gamer says Bret pays well for listed animals and will even collect some carcasses. The Survival challenge Legendary Hunter asks you to kill all 8 unique animals; this guide does not invent their names or dens.",miss:false},
+    {id:"billy",name:"Billy",ch:"Chapter 2",count:"Does not count",trophy:"The Lone Rider (final mission)",jobs:"Thrillbillies (Check Out the Mud Club); Twist Wrist, Smash, Grab; Mall Rats; The Impaler (Steal the Impaler); Hometown Heroes.",notes:"Five jobs starting at the Mud Club. Does not count for Strangers & Freaks, but the finale has its own trophy.",miss:false},
+    {id:"yago",name:"Yago",ch:"Chapter 3",count:"Counts for Strangers & Freaks",trophy:"",jobs:"Join a Street Race; Bumper to Bumper (Mentor Yago) — Jason only; Race Against Yago (time-sensitive, missable); Brother to Brother (Back Up Yago) — Jason only.",notes:"PowerPyx marks this strand as counting. One race is time-sensitive.",miss:false},
+    {id:"andy",name:"Andy",ch:"Chapter 3",count:"Does not count",trophy:"Road to Rehabilitation (final mission)",jobs:"Climbing the Cellerichain (parts 1–3); Pay the Cellerica Fee; Peach! (initiation); Read the Label (retrieve the van); Puff Puff Pass (meet at the warehouse). All Lucia only.",notes:"Five Lucia-only Cellerica jobs.",miss:false},
+    {id:"yasmani",name:"Yasmani",ch:"Chapter 3",count:"Does not count",trophy:"",jobs:"Yasmani’s Jewelry Jobs; ATM Jobs; Payday Loans Jobs; Tail the Security Van.",notes:"IGN and PowerPyx count Yasmani’s Jewelry Jobs among main-story steps; PC Gamer leaves it off the 91-mission list. Yasmani is also a jewelry / marked-bills fence in money guides.",miss:false},
+    {id:"randy",name:"Randy",ch:"Chapter 3",count:"Own trophy; S&F unconfirmed",trophy:"Supply & Demand (final mission)",jobs:"Randy’s Wish List — deliver a list of high-end cars (guides say more than a dozen).",notes:"Randy clones keys for modern, flashy cars and pays more than Moses, especially if the car is in good condition. PowerPyx did not mark the strand as counting for Strangers & Freaks.",miss:false},
+    {id:"tyrone",name:"Tyrone",ch:"Chapter 3",count:"Does not count",trophy:"Spin On This! (final mission)",jobs:"Take Out Kitty Litter (Kitty Litter Labs); Spin On This (Shut Down the Labs).",notes:"Tyrone is also a narcotics fence in money guides. Each synthetic-lab job counts as an optional task.",miss:false},
+    {id:"dunk",name:"Dunk",ch:"Chapter 3",count:"S&F unconfirmed",trophy:"",jobs:"Dunk’s Robbery Tips.",notes:"Dunk is introduced in Chapter 2’s Slam Dunk. PowerPyx listed this work without a Counts / Does not count flag, so it is left unconfirmed for the 8-strand trophy.",miss:false},
+    {id:"papa",name:"Papa Audacity (Unknown Stuntman)",ch:"Chapter 3",count:"S&F unconfirmed",trophy:"",jobs:"The Unknown Stuntman.",notes:"PowerPyx listed this without a Counts flag. Leave it unverified for the trophy and check the counter if you finish it.",miss:false},
+    {id:"eddie",name:"Eddie Acosta",ch:"Chapter 4",count:"Does not count",trophy:"",jobs:"Attend Eddie Acosta’s Party.",notes:"Does not count for Strangers & Freaks.",miss:false},
+    {id:"pete",name:"Pilot Pete",ch:"Chapter 4",count:"Counts for Strangers & Freaks",trophy:"",jobs:"The Last Mile: Passing the Torch (Recover Pete’s Plane); The Last Mile: Backseat Pilot (Deliver Packages); Pete’s Deliveries: Southpoint Airfield; Pete’s Deliveries: Avery Allen & Co.; further package deliveries. All Jason only.",notes:"PC Gamer says Pete is met in Chapter 3 and offers regular, timed cocaine-drop flights in Chapter 4, paying about $10,000–$20,000 per run if you hit every buyer before they leave.",miss:false},
+    {id:"shayna",name:"Shayna",ch:"Chapter 4",count:"Does not count",trophy:"",jobs:"This is a Free Call From… (Pick up Shayna) — Lucia only, time-sensitive, missable.",notes:"Not needed for the trophy or 100%.",miss:true}
+  ];
+
+  var COLLECT=[
+    {id:"cards",cat:"Collections",name:"Collectible card sets",count:"18 sets, 480 cards",need:"15 of 18 sets for 100%; the Don’t Touch My Deck trophy needs 3 complete sets",how:"Cards form sets you can sell at pawn shops. The 18 sets PowerPyx lists are: Vice City Flamingos (24), Vice City Narcos (24), Vice City Manatees (24), Vice City Club De Fútbol (30), Liberty City Swingers (24), Liberty City Penetrators (24), Liberty City Wrath (24), Los Santos Corkers (24), Los Santos Panic (24), Los Santos Pounders (24), Backyard Wrestling (12), America’s Next Top Hooker (24), Delights Dancers (18), Jack of Hearts Dancers (36), Nine1Nine Dancers (36), The Legends of Ratface (36), Right Wing: America’s Hero (36), and Ed Comics Universe (36). Individual pins were still being mapped at launch; use a map that cites IGN or PowerPyx, or the in-game Progress menu. The Exploration challenge Collectible Cards asks you to find 3 cards in all 5 counties."},
+    {id:"waink",cat:"Collections",name:"WAiNK locations",count:"5 types, 108 listed spots (31 Landmarks, 35 Curiosities, 23 Sculptures, 4 Peewees Billboards, 15 No Flusher Tags)",need:"Any 100 scans for 100% and for the You WAiNKer! trophy",how:"Scan landmarks and curiosities with the WAiNK app on your phone. The trophy wording is “WAiNK It at 100 locations.” A later cheat (Powdered Sugar) asks you to scan all space debris with WAiNK; that is a separate unlock, and major guides had not published a full debris list yet."},
+    {id:"trash",cat:"Collections",name:"Ahol street art (Geographies of Trash)",count:"112 pieces in 11 junk types",need:"Not required for 100% completion",how:"PowerPyx’s breakdown: 10 mattresses, 8 tires, 9 wheels, 9 fridges, 7 armchairs, 8 TVs, 15 containers, 13 cones, 11 buckets, 13 pallets, 9 chairs. Photograph or collect them as the in-game category describes. Because they are not on the 100% list, this guide does not invent a pin for each one."},
+    {id:"murals",cat:"Collections",name:"1010 Murals",count:"5 murals",need:"Not required for 100%",how:"A small collection of five “1010 Murals” in the Progress Database. Locations were not fully written up in the PowerPyx overview used here."},
+    {id:"underwater",cat:"Exploration",name:"Underwater discoveries",count:"33 discoveries",need:"All 33 for 100%",how:"Unusual sights on the ocean floor, separate from Kenton’s treasure-dive sets. The Exploration challenge Underwater Discoveries only needs any 25. Underwater Treasures (85 treasures) and Black Hole Wrecks (all 11) are challenge goals, not 100% lines."},
+    {id:"mags",cat:"Exploration",name:"Magazines, books, and comics",count:"27 magazines / books / comics, plus 7 book swaps (34 total)",need:"30 of 34 for 100%",how:"Readable literature scattered around Leonida, including the Red Dead and Liberty City books mentioned in the Secrets tab. Book swaps are a separate 7-entry list in the same 100% line."},
+    {id:"meditate",cat:"Exploration",name:"Meditation spots",count:"18 marked spots, plus a possible house meditation in Chapter 1",need:"15 of 18 marked spots for 100%; the Positive Mental Attitude trophy asks you to meditate at every spot",how:"Meditating with both Jason and Lucia at a spot can count as two optional tasks. After Down to Earth, accept Lucia’s morning balcony meditation at Jason’s house — it increases a Progress counter but is not marked like the other spots, and guides are not yet sure whether it is required for the trophy."},
+    {id:"flamingos",cat:"Exploration",name:"Cocaine flamingos",count:"125 lawn flamingos",need:"Destroy 100 of 125 for 100%",how:"Destroy the plastic flamingos you find around the state. A spawn-vehicle cheat later asks you to destroy 50 of them."},
+    {id:"playlists",cat:"Exploration",name:"Unique playlists",count:"2",need:"Both for 100%",how:"PowerPyx lists two unique playlists on the 100% checklist. A detailed how-to was not in the overview used here; check Progress > Exploration in-game."},
+    {id:"styles",cat:"Exploration",name:"Discovered styles",count:"79 total: 13 Jason magazine styles, 15 Lucia magazine styles, 17 magazine tattoos, 34 luxury watches",need:"70 of 79 for 100%",how:"Find magazine looks, tattoos, and luxury watches in the world. Watches also feed two Environment cheats (find 10 / 20 collectible watches). Ultimate Edition adds Wyman’s Cars as a related Progress line (5 entries), which is exclusive to that edition."},
+    {id:"vehicles",cat:"Discovery",name:"Vehicles (WAiNK scans)",count:"557 total: 277 base models, 280 Standout",need:"Any 200 of 277 base models for 100%; Whip It Good needs 100 vehicles discovered",how:"Scan with WAiNK. Base-model categories PowerPyx lists: 18 coupes, 26 muscle cars, 8 off-road, 17 pickups, 29 sedans, 13 sports, 9 supercars, 23 SUVs, 14 vans, plus 29 bikes, 28 watercraft, 16 aircraft, and 47 service vehicles (trucks, utility, emergency, military, industrial, transport). Standout categories include Ultra-Luxe, Street Racer, Girlypop (16, also a Neon Jungle cheat unlock), Leonida Man, and many more — they do not count toward the 200."},
+    {id:"weapons",cat:"Discovery",name:"Standard-issue weapons",count:"66 standard issue (53 guns, 9 melee, 4 explosives) plus 130 variants",need:"Any 50 of 66 standard-issue weapons for 100%",how:"Buy them at Ammu-Nation, especially Expanded stores, or pick up guns from enemies. Holding a weapon once is enough. Variants are tracked separately. See the Weapons tab."},
+    {id:"animals",cat:"Discovery",name:"Animals studied",count:"255 animals in 8 groups",need:"Study any 100 of 255 for 100%; Fair Game and Legendary Hunter are separate hunting goals",how:"Select binoculars from the weapon wheel, zoom in, and hold the study button. You do not need to hunt or skin them for this tally. PowerPyx’s groups: 61 hunts, 35 fish, 18 mammals, 34 cats & dogs (each breed counts), 6 reptiles, 60 birds, 18 aquatic, 23 other. Fish can be studied by swimming near them. Lots of wild animals are in the northern countryside and the swamps."}
+  ];
+
+  var WYMAN=[
+    {id:"transgressor",name:"’67 Transgressor",status:"Confirmed (Push Square)",need:"Scan 3 wrecks, then pay Wyman $1,500 in BuckMe",locs:["Trailer park on Tanglewood Ln in Port Gellhorn, just north of Sarena’s Bargain Store — on a paved area in a field with pigs.","Northern Port Gellhorn on Gellhorn Ave, north-west of Wasteland Off-Road: a blue house with sunflower decorations; follow the path down the right side to the garage at the back.","Very southern tip of Port Gellhorn, below Dirt Merchants (or a Dunk’s Robbery Tip if you have not cleared it): behind a wooden hut next to a broken fence."],stats:"Push Square stats: Speed 5.1, Acceleration 5.8, Asphalt 3.3, Off-road 4.5, Strength 3.0."},
+    {id:"riata",name:"’70 Riata",status:"Confirmed (Push Square)",need:"Scan 3 wrecks, then pay $1,500",locs:["Southwind in Mariana County, just east of Mile Zero Air Station: end of Cangrejo St, not far west of a Xero gas station, in the carport.","Sunset Dr in Key Lento, a few houses south-west of the Christmas House, directly opposite the police impound; look underneath the house in front of a shed.","Old Fort Rd in Shoreless Keys, Mariana County: north of Grassrivers Cafe & Deli, behind the main building of an abandoned gas station."],stats:"Speed 3.3, Acceleration 4.2, Asphalt 3.0, Off-road 7.2, Strength 3.0."},
+    {id:"mamba",name:"’64 Mamba GT",status:"Confirmed (Push Square)",need:"Scan 4 wrecks, then pay $1,500",locs:["Eastern side of Gellhorn, north of Leonida State Prison, inside the garage of a grey detached farmhouse.","East of the Dirt Track Races at the Thrillbilly Mud Club, in a small pond (set a waypoint via Activities > Thrillbilly Mud Club > Dirt Track Races).","Ambrosia: alley south of the Xero gas station, between US-35 and Lakewood Way, inside a green building with a grey garage door (near a yellow building with a big blue door).","Northern Moreau, north of Buck Creek Country Store: take the path down the hill from the broken bridge; the wreck is among the bridge parts in the water."],stats:"Speed 7.8, Acceleration 7.7, Asphalt 6.3, Off-road 3.2, Strength 3.0."},
+    {id:"reynolds",name:"Reynolds Kit Car",status:"Confirmed (Push Square)",need:"Scan 5 wrecks, then pay $1,500",locs:["Willie’s Service Center on SW 7th Ave in Salton, Vice City — a blue and yellow building immediately north of the 7th Avenue Garage. Break in and scan the scrap inside.","Casanova Island in the Rialto Islands: northern part of the island, immediately behind a wooden gate on a house east of a vacated plot.","Far west of Port Gellhorn on the coast of Wild Hog Point, inside a Scoop shipping container.","Alley behind Donnie’s Auto Repair in Watson Bay, right next to the Pay ’n’ Spray; parked in front of some shutters.","North-western Capri, in a posh residential area: house with two bins opposite a construction site; break into the garage down the driveway to the right."],stats:"Speed 7.0, Acceleration 7.4, Asphalt 5.5, Off-road 3.8, Strength 3.0."},
+    {id:"deviant",name:"Fifth restored car (reported as a ’72 Deviant)",status:"Reported / unconfirmed",need:"Fan wikis say that after the four rebuilds, Wyman calls, you pay another $1,500, and he presents a finished car at his garage. Push Square’s November 22 guide was still a work in progress and had not listed this car yet.",locs:[],stats:"Not confirmed here. Do not treat wiki names or barn-door instructions as verified until a major guide publishes them."}
+  ];
+
+  var WEAPON_INFO=[
+    {id:"howto",name:"How to get weapons",text:"Buy from Ammu-Nation, or pick up guns dropped by enemies and from law-enforcement trunks (there is a Criminal challenge for that). Highlight a gun-store icon on the map: stores marked Expanded sell the full inventory, including launchers. You can store melee weapons in a vehicle trunk. Ownership is tracked in Progress > Weapons."},
+    {id:"cats",name:"What the Progress menu counts",text:"53 guns, 9 melee weapons, and 4 explosives make up the 66 standard-issue weapons. There are also 130 variants (unique or cosmetic versions). 100% completion needs any 50 of the 66 standard-issue weapons. This guide does not invent a full 53-gun price list; buy or pick up weapons as you go and check the menu."},
+    {id:"ranges",name:"Shooting ranges",text:"PowerPyx names two ranges: Griffin Shooting Range and Rodgers Ranch. Buy a $5 waiver pass from the clerk at each. 100% completion and The Shootist trophy require all 42 gold medals across 14 shooting-range challenges (bronze, silver, and gold are available on each course). The Survival challenges Marksman and Pro Marksman also use these ranges."},
+    {id:"focus",name:"Combat Focus",text:"Press L3 + R3 (LS + RS) to use Focus: it slows time, highlights items, and tracks noises. The Gunslinger trophy asks you to take down 5 enemies in a single use. Several Combat challenges also require Focus headshots."}
+  ];
+
+  var GARAGES=[
+    {id:"mitchel",name:"Mitchel Auto Center",price:"$4,000",loc:"Central Kelly County, east of Port Gellhorn — GameSpot says it sits in the middle of the “Kelly County” text on the map.",note:"Cheapest purchasable garage. GameSpot spells it Mitchel; some later lists use Mitchell. Same $4,000 figure in both.",status:"Confirmed price",buy:true},
+    {id:"persistence",name:"Persistence Road Garage",price:"$7,600 (PowerPyx’s $160,000 eight-garage total) or $9,500 (GameSpot, Nov 18 pre-release article)",loc:"Western Belville / Bellville, north of Vice City in southern Leonard County, just above the “South Leonard County” map text.",note:"Guides disagree on the price. Prefer the in-game Vice City Real Estate listing.",status:"Price disputed",buy:true},
+    {id:"seventh",name:"7th Avenue Garage",price:"$12,000",loc:"Just east of Vice City International Airport in south Vice-Dale County, off the main highway northwest of Tequesta and south of Salton.",note:"A Reynolds Kit Car wreck is in Willie’s Service Center immediately north of this garage.",status:"Confirmed price",buy:true},
+    {id:"storenbolt",name:"Store ’N’ Bolt",price:"$16,800",loc:"Northern Ambrosia, northwest of Wyatt Motors, near the large monument in the north of town.",note:"Agreed price in GameSpot and later lists.",status:"Confirmed price",buy:true},
+    {id:"wyatt",name:"Wyatt Motors",price:"$21,600",loc:"Central Ambrosia, right near the Pay ’n’ Spray.",note:"Agreed price.",status:"Confirmed price",buy:true},
+    {id:"vela",name:"Vela Rota Drive Garage",price:"$24,000 (lists that total $160,000) or $30,000 (GameSpot, Nov 18)",loc:"In the middle of Capri, west of South Kelly County, West Vice-Dale County, and North Mariana County.",note:"Guides disagree on the price. Prefer the in-game app. GameSpot spells it Vela Rota Drive.",status:"Price disputed",buy:true},
+    {id:"bonita",name:"Bonita Court Garage",price:"$34,000",loc:"Center of Washington Island, north of Washington Beach and east of Penmarch Isle.",note:"Agreed price.",status:"Confirmed price",buy:true},
+    {id:"atlantic",name:"Atlantic Court Garage",price:"$40,000",loc:"Ocean Beach, just east of the “Vice Beach” map text, south of the Y Hotel and southwest of the VYB Club.",note:"Most expensive purchasable garage. Agreed $40,000 price.",status:"Confirmed price",buy:true},
+    {id:"pgstation",name:"Port Gellhorn Station Garage",price:"Free (story)",loc:"Port Gellhorn, north of Moses’ auto shop and west of Delights Strip Club.",note:"GameSpot says Moses gives you this garage during the story. PowerPyx’s Little Boxes trophy does not require story garages.",status:"Confirmed",buy:false},
+    {id:"paradise",name:"Paradise Garage",price:"Free (Ultimate Edition)",loc:"Northeastern Watson Bay.",note:"Wyman stores the ’67 Vapid Dominator Buggy here. Has a weapon locker and a fencing stash. Not a Vice City Real Estate purchase.",status:"Confirmed",buy:false},
+    {id:"shore",name:"Shore Court Garage",price:"Vintage Vice City Pack",loc:"Near Ocean Beach; unlock in Chapter 3 with the ’55 Stanier (TheGamer also points you to the Ocean View Hotel in Vice Beach).",note:"Weapon locker and fencing stash. Pre-order / early-purchase pack, not Ultimate-exclusive.",status:"Confirmed",buy:false},
+    {id:"elegyg",name:"Crosstown GTA+ garage",price:"GTA+ (Chapter 3)",loc:"Crosstown, Vice City.",note:"Single-car garage with a weapon locker and direct fencing, bundled with the Venturas BLVD Elegy. Only while membership is active.",status:"Confirmed",buy:false}
+  ];
+
+  var MONEY=[
+    {t:"Bank it in BuckMe",d:"The Chapter 1 mission Buck Me sets up banking. Money in your pocket can be lost when you die or get busted. Keep a little walking-around cash, but deposit the rest. A Shopping challenge later asks you to bank $1,500,000 in checking."},
+    {t:"Steal from other criminals",d:"PC Gamer’s top tip: when you hear sirens, alarms, or a crew fleeing with duffel bags, take their loot. In Chapters 2 and 3 another crew’s cash, jewels, or drugs often pays more than hitting the same place yourself. Travel as a couple so you can carry multiple bags, then fence the take."},
+    {t:"Fence to the right person",d:"Money guides recommend selling narcotics to contacts like Tyrone and jewelry or marked bills to Yasmani once those fences are available in Chapter 3. 100% completion requires $100,000 narcotics fenced, $100,000 jewelry fenced, $250,000 marked bills fenced, and $200,000 vehicles fenced. The Dime on the Dollar trophy is $250,000 in marked bills."},
+    {t:"Moses, then Randy",d:"From Chapter 2, Moses in Port Gellhorn buys lower-profile stolen cars (often $1,000 to several thousand; GameSpot says some deliveries can top $10,000) but needs a cooldown between buys. He will often tell you where the cars he wants are. From Chapter 3, Randy wants flashier, modern cars, pays more, and rewards clean condition. Pay ’n’ Spray also buys eligible cars, but not ones with high-end trackers."},
+    {t:"Rob from the back in Chapter 3",d:"Once you have the snap gun, come in through a back door, cut cameras and alarms, and take the safe, drawers, and display cases. PC Gamer puts a careful jewelry or pawn job at about $6,000–$15,000. Wait on large banks and payday loans until Credit Check gives you the Dye Pack Jammer. 100% needs all 22 bank jobs, all 7 payday-loan jobs, 34 of 35 smash-and-grabs, 50 of 91 stick-ups, and all 8 vaults."},
+    {t:"Gang operations",d:"Yellow Illegal Operation icons mark gang hideouts. There are 39, and 100% plus Pest Control (one operation per gang, 9 gangs) need them done — loot every key valuable shown on the icon. They pay well in narcotics and sometimes unique guns or cars, but expect a fight or a stealth run. 19 are marked by story progress; they can be robbed again after a long respawn if you missed a valuable."},
+    {t:"Repeatable, lower-risk work",d:"PC Gamer recommends demolition derby at Ambrosia Raceway (about $3,800 on the oval, twice that on the figure-eight; you can win by wrecking everyone and you may rent a car). Bret’s hunts pay from hundreds to thousands; a large boar was cited at $2,500. Kenton’s dive sets add up to tens of thousands once complete. Pilot Pete’s Chapter 4 airdrops pay about $10,000–$20,000 if you hit every buyer on time."},
+    {t:"Starlet Motel rent (Chapter 2)",d:"GameSpot: around the Port Gellhorn stretch, Lucia must raise a few thousand dollars in rent while Jason is injured. Use the green-marked stores in town, mugging, and Moses until the story moves on. This is a story gate, not a late-game money method."},
+    {t:"What usually pays less than it costs in time or heat",d:"Mugging (a couple hundred), car trunks, rooftop lockboxes, and most coastline pickups are small. Towing ATMs with a winch is noisy and slow. Pawn-shop clerks tend to fight. Treat Yo Self only needs $100,000 spent across shops — guns, mods, and tattoos are the fastest way."}
+  ];
+
+  var SECRETS=[
+    {id:"rdr-book",name:"Red Dead Redemption references",region:"Various",where:"Polygon: a copy of The Cowboy’s Prayer Is to Die Young is in Brian’s office at the marina. GameSpot also found a Western novel about a cowboy in New Austin at Jacob’s Tavern in Millport. Polygon separately found a convincing replica of Arthur’s hat at a yard sale about two blocks south of Moses’ garage in Port Gellhorn.",how:"Read the book excerpts. Polygon says the marina book follows Rust McCreary, a stand-in for Arthur Morgan, and mentions New Austin, Blackwater, Ambarino, and a rundown of tracking Flaco Hernandez to a cabin on Cairn Lake.",src:"GameSpot, Polygon"},
+    {id:"liberty",name:"Liberty City memoir in Jason’s house",region:"Leonida Keys",where:"On Jason’s small table near the back door, early in Chapter 1, while you can roam his home.",how:"GameSpot: a memoir from a former member of Liberty City’s organized crime ring. The text references events from 2008, tying it to Grand Theft Auto IV.",src:"GameSpot"},
+    {id:"dexter",name:"Dexter’s apartment (Trinity Apartments)",region:"Vice City",where:"Trinity Apartments on Washington Island, near Vice Beach. GameSpot places it near the Vice Beach Top Fun Drones shop. Polygon says the building is near the top of the island and is named for a villain from the show.",how:"A stand-in for Dexter Morgan’s Miami apartment. GameSpot reported you cannot get inside the apartment itself, though a nearby boat reminded players of the Slice of Life. Polygon describes exploring the building and finding tools on the rooftop (rope, knife, syringe). Reports differ on how much of the interior is accessible; go see it yourself.",src:"GameSpot, Polygon"},
+    {id:"egg",name:"A literal Easter egg",region:"Vice City",where:"Atop the tallest tower in Vice City proper. A player who found it told GameSpot the climb took about seven minutes.",how:"Take the egg from the nest and throw it. GameSpot deliberately withholds what happens next.",src:"GameSpot"},
+    {id:"bigfoot",name:"Bigfoot / Skunk Ape",region:"Grassrivers",where:"Gullet Marsh, during Kirk’s Skunk Ape mission strand (see Side Jobs).",how:"GameSpot says the encounter is essentially unmissable if you do that mission, and that there is more to see if you want to look it up. Treat it as a story-adjacent secret, not a hidden spawn you have to stumble on.",src:"GameSpot, Polygon"},
+    {id:"mario",name:"Super Mario bong",region:"Mount Kalaga / Lummox County",where:"GameSpot only placed it “deep inside Lummox County” and did not publish a precise pin in the article used here.",how:"A Super Mario Bros. reference involving a “magic bong” and snazzy caps. Without a verified exact location, look in Lummox County rather than following unofficial pins.",src:"GameSpot"},
+    {id:"jetski-dog",name:"Dog on a jet ski",region:"Leonida Keys",where:"In the water near Jason’s house during his early Chapter 1 bachelor days. Swim out far enough.",how:"Polygon: a German Shepherd riding a jet ski alone, likely a nod to a real Fort Lauderdale wave-riding dog (a Golden Retriever in real life).",src:"Polygon"},
+    {id:"weirdal",name:"Weird Al on Vice City FM",region:"Radio",where:"The in-game radio station Vice City FM, plus Burger Shot ads and other commercials.",how:"Polygon quotes Weird Al confirming he hosts the non-stop ’80s channel, wrote some in-game commercials, and voices the Burger Shot ads.",src:"Polygon"},
+    {id:"saw",name:"Saw-style ambush on Hyde Island",region:"Vice City area",where:"Explore or swim around Hyde Island.",how:"Polygon: you can be kidnapped, temporarily lose your items, and wake in a storage container with a detonation device on your neck. After a countdown you are hunted in the dark by a man with night-vision, a sniper rifle, and a dog. Sneak, gather ammo, take him down, recover your gear, and escape. Be ready for a nasty surprise.",src:"Polygon"},
+    {id:"crab",name:"Giant enemy crab",region:"Grassrivers",where:"An optional side mission in Gullet Marsh.",how:"Polygon: Jason is abruptly attacked by a “giant enemy crab,” a nod to the old E3 2006 meme.",src:"Polygon"},
+    {id:"radio-lore",name:"Older GTA tributes on radio and podcasts",region:"Radio / podcasts",where:"In-game radio and the podcast Fuck, Marry, Murder, plus a dedicated episode about the story of Grand Theft Auto V.",how:"Polygon: the podcast hosts discuss the murders of Eddie Low, a serial killer from GTA IV and V. Official PlayStation copy also notes that VI is the first GTA with on-demand podcasts, listenable in vehicles or on foot with headphones or earbuds.",src:"Polygon, PlayStation Blog"}
+  ];
+
+  var HUNDRED=[
+    {g:"Story & tasks",n:"Finish the story",d:"Complete the five-chapter main story. Nothing on this checklist is missable after the credits."},
+    {g:"Story & tasks",n:"100 optional tasks",d:"Purple icons and black icons with pink letters. There are far more than 100 (PowerPyx estimates 200–300+). Each Moses or Randy car delivery, Tyrone lab, meditation, Cal fishing challenge, and Strangers & Freaks job counts. A few early optional jobs are missable; it does not matter."},
+    {g:"Story & tasks",n:"39 of 39 gang operations",d:"Yellow Illegal Operation icons. Loot every key valuable shown on the icon. 19 are marked by the story. They respawn slowly if you miss something."},
+    {g:"Story & tasks",n:"22 of 22 bank jobs",d:"Unlocked after Chapter 3’s Credit Check (Dye Pack Jammer). Filter Map > Robberies > Bank Jobs. Small banks need both the cash drawer and the safe."},
+    {g:"Story & tasks",n:"7 of 7 payday-loan jobs",d:"Fully complete every payday-loan robbery in the Robberies filter."},
+    {g:"Story & tasks",n:"34 of 35 smash-and-grabs",d:"Jewelry stores and pawn shops. You can skip one."},
+    {g:"Story & tasks",n:"50 of 91 stick-ups",d:"Convenience stores, liquor stores, and fast-food joints. Only 50 are required."},
+    {g:"Story & tasks",n:"$100,000 narcotics fenced",d:"Sell narcotics to the right contacts (Tyrone is the usual example in money guides)."},
+    {g:"Story & tasks",n:"$100,000 jewelry fenced",d:"Sell jewelry to the right contacts (Yasmani is the usual example)."},
+    {g:"Story & tasks",n:"$250,000 marked bills fenced",d:"Needs the Dye Pack Jammer from Credit Check. Also the Dime on the Dollar trophy."},
+    {g:"Story & tasks",n:"8 of 8 vaults hit",d:"The large-bank / vault jobs. Also the Maximum Withdrawal trophy (rob 5 vaults and escape)."},
+    {g:"Story & tasks",n:"$200,000 vehicles fenced",d:"Sell stolen vehicles to Moses, Randy, or Pay ’n’ Spray."},
+    {g:"Exploration",n:"5 of 7 Kenton dive sets",d:"Treasure dives from Kenton’s Key Lento shop."},
+    {g:"Exploration",n:"15 of 18 collectible card sets",d:"Complete 15 of the 18 sets (480 cards total). The Don’t Touch My Deck trophy only needs 3 sets."},
+    {g:"Exploration",n:"100 WAiNK locations scanned",d:"Any 100 of the 108 listed landmarks, curiosities, sculptures, billboards, and tags."},
+    {g:"Exploration",n:"33 of 33 underwater discoveries",d:"All unusual ocean-floor sights in that category."},
+    {g:"Exploration",n:"30 of 34 magazines, books, and comics",d:"27 magazines/books/comics plus 7 book swaps."},
+    {g:"Exploration",n:"15 of 18 meditation spots",d:"The trophy asks for every spot; 100% only needs 15 of 18. Still accept the Chapter 1 house meditation."},
+    {g:"Exploration",n:"100 of 125 cocaine flamingos destroyed",d:"You can leave 25 standing."},
+    {g:"Exploration",n:"2 of 2 unique playlists",d:"Both playlists in Progress > Exploration."},
+    {g:"Exploration",n:"70 of 79 discovered styles",d:"Magazine looks, tattoos, and luxury watches."},
+    {g:"Activities",n:"30 of 40 unique races won",d:"Blue race icons appear when you get close. Filter Map > Activities > Racing."},
+    {g:"Activities",n:"10 of 13 race-challenge gold medals",d:"You can skip the three hardest time trials."},
+    {g:"Activities",n:"42 of 42 shooting-range gold medals",d:"All golds at Griffin and Rodgers Ranch after buying the $5 waiver at each. Also The Shootist trophy."},
+    {g:"Activities",n:"4 of 4 video games played",d:"The four arcade / video games."},
+    {g:"Activities",n:"5 of 7 pool opponents defeated",d:"You can skip two opponents."},
+    {g:"Activities",n:"2 of 3 mini-golf locations played",d:"PowerPyx lists several golf courses in Activities (King Gator, Frontier, Dino Golf, Leaf Links, Mount Hailes). This 100% line only needs 2 of 3 mini-golf locations — check the in-game checklist for which three it counts."},
+    {g:"Activities",n:"90 of 100 basketball hoops",d:"The Basketball Pro challenge asks for all 100; 100% completion only needs 90."},
+    {g:"Activities",n:"42 of 42 drone time trials",d:"Top Fun drone races: 14 locations and 42 time trials. The Top Fun trophy is to win at every location (14)."},
+    {g:"Activities",n:"300 of 397 stunts",d:"130 stunt jumps, 202 under-the-bridges, 40 knife flights, 25 base jumps. The Cunning Stunts trophy is 250 stunts."},
+    {g:"Activities",n:"70 of 80 challenges",d:"Any 70. See the Challenges tab. One Last Thing only needs 50."},
+    {g:"Activities",n:"15 of 15 of Bret’s Target Decks",d:"All of Bret Vogel’s hunting decks. Jason only."},
+    {g:"Discovery",n:"200 of 277 base-model vehicles scanned",d:"WAiNK scans. Standout vehicles do not count toward this 200."},
+    {g:"Discovery",n:"50 of 66 standard-issue weapons found",d:"53 guns, 9 melee, 4 explosives. Holding each once is enough."},
+    {g:"Discovery",n:"100 of 255 animals studied",d:"Binoculars, or swim near fish. No skinning required."}
+  ];
+
+  var TROPHIES=[
+    ["Vice Got a Price!","Platinum","0G","Earn every other trophy. The platinum’s text is “Congratulations! You’re a Leonida Legend.”","Platinum"],
+    ["Just Like Paradise","Bronze","5G","Complete Gone Fishing.","Story"],
+    ["Paradise Lost","Bronze","20G","Complete Chapter 1.","Story"],
+    ["Tits Ass Drug Money","Bronze","20G","Complete Chapter 2. GamesRadar prints the title with letters starred out.","Story"],
+    ["Vice City, Baby!","Bronze","20G","Complete Chapter 3.","Story"],
+    ["Top Of The World, Ma","Bronze","20G","Complete Chapter 4.","Story"],
+    ["You Gotta Know When to Get Off","Gold","50G","Complete the final mission.","Story"],
+    ["Trust","Bronze","10G","Complete Breakfast Run.","Story"],
+    ["Break the Bank","Bronze","25G","Complete The Cartel Heist.","Story"],
+    ["Family Matters","Bronze","15G","Complete Child's Play.","Story"],
+    ["DWNFALL","Bronze","15G","Complete Headliners.","Story"],
+    ["Hi-Jacked","Bronze","25G","Complete VCIA Takedown.","Story"],
+    ["Snow Storm","Bronze","25G","Complete Operation Savage Glory.","Story"],
+    ["A Long Road","Gold","100G","Attain 100% completion. Hardest trophy, per PowerPyx.","Completion"],
+    ["Cunning Stunts","Silver","40G","Complete 250 stunts.","Activities"],
+    ["Master of None","Bronze","20G","Try each type of activity once (9 types).","Activities"],
+    ["The Shootist","Silver","40G","Earn a gold medal in all shooting-range challenges (42).","Activities"],
+    ["Top Fun","Bronze","15G","Win a Top Fun drone race at every location (14).","Activities"],
+    ["Earn Cash, Not Kudos","Bronze","20G","Win 20 different races.","Activities"],
+    ["Baited My Tackle","Bronze","10G","Beat Cal in a fishing challenge.","Side"],
+    ["Stick Fiddler","Bronze","10G","Complete an arcade game.","Activities"],
+    ["Road to Rehabilitation","Bronze","15G","Complete the final mission for Andy.","Side"],
+    ["This Was No Boat Accident","Bronze","15G","Complete the final mission for Kenton.","Side"],
+    ["The Lone Rider","Bronze","15G","Complete the final mission for Billy.","Side"],
+    ["Strangers & Freaks","Silver","30G","Complete 8 mission strands for strangers across Leonida.","Side"],
+    ["Supply & Demand","Bronze","20G","Complete the final mission for Randy.","Side"],
+    ["Spin On This!","Bronze","15G","Complete the final mission for Tyrone.","Side"],
+    ["Positive Mental Attitude","Bronze","10G","Meditate at every spot across Leonida (18). Potentially missable — accept Lucia’s Chapter 1 house meditation.","Missable"],
+    ["Fair Game","Bronze","15G","Hunt a unique animal for Bret.","Side"],
+    ["Don't Touch My Deck","Silver","30G","Complete 3 collectible card sets.","Collectibles"],
+    ["You WAiNKer!","Silver","30G","WAiNK it at 100 locations.","Collectibles"],
+    ["One Last Thing","Bronze","5G","Complete 50 challenges.","Challenges"],
+    ["Hot Together","Bronze","20G","Lose a 4-star wanted level with your partner and escape the heat.","Partner"],
+    ["Retail Therapy","Bronze","20G","Rob 3 shops back-to-back with your partner without losing your wanted level.","Partner"],
+    ["Whip It Good","Bronze","20G","Discover 100 vehicles.","Discovery"],
+    ["Gunslinger","Bronze","10G","Take down 5 enemies in a single use of Combat Focus.","Combat"],
+    ["Catch Me If You Can","Bronze","10G","Make an unscheduled departure at VCIA.","Misc"],
+    ["Challenging Tank","Bronze","10G","“Kinda hot in these Rhinos.” (Hidden / secret trophy.)","Secret"],
+    ["Sneakthief","Bronze","10G","Rob a jewelry store without being detected.","Crime"],
+    ["Maximum Withdrawal","Silver","40G","Rob 5 bank vaults and escape.","Crime"],
+    ["A Classic Blitz Play","Bronze","10G","Rob an armored truck and escape.","Crime"],
+    ["The Goodtime State","Bronze","20G","Explore all of Leonida.","Exploration"],
+    ["Pest Control","Bronze","20G","Rob an illegal operation belonging to each gang (9 gangs).","Crime"],
+    ["In The Beginning…","Bronze","5G","Enjoy a cocktail with a view on Ocean Beach.","Misc"],
+    ["Capital Offense","Bronze","5G","Smash your way out of a vehicle showroom in classic style.","Misc"],
+    ["Let’s Go Bowling","Bronze","5G","Follow-through at the Kolt & Associates bowling alley.","Misc"],
+    ["Personal Best","Bronze","5G","A partnership with mass appeal. (Hidden / secret.)","Secret"],
+    ["Actions Speak Louder","Bronze","5G","Choices made, for better or worse (500).","Misc"],
+    ["Bad Luck, I Guess","Bronze","5G","Second time's the charm. (Hidden / secret.)","Secret"],
+    ["The Truth Is Out There","Bronze","5G","What the hell just happened? (Hidden / secret.)","Secret"],
+    ["Ten Pin","Bronze","5G","Bowl 'em over with a melee drive-by.","Misc"],
+    ["Dime on the Dollar","Bronze","20G","Earn $250,000 laundering marked bills through your contacts.","Money"],
+    ["Treat Yo Self","Bronze","15G","Spend $100,000 across all shops.","Money"],
+    ["Little Boxes","Bronze","15G","Purchase all garage properties (the 8 purchasable garages).","Property"],
+    ["On the Spot","Bronze","15G","Register 10 vehicles to the Scooter Bros app. Buy garages first so you have parking spots; unlock Moses and the app in Chapter 2, then register at his garage (Respray, then Register). Early on he only takes vehicles without trackers; later in Chapter 3 you can register cars with standard trackers at any Pay ’n’ Spray.","Property"]
+  ];
+
+  var CHALS=[
+    ["Combat","Speed Kills","Kill 3 enemies in under 30 seconds."],
+    ["Combat","Melee Combat","Kill or knock out 5 enemies in a row using melee weapons without dying."],
+    ["Combat","Explosive Combat","Kill or injure 3 enemies with a single explosive."],
+    ["Combat","Headshots","Kill 4 enemies with headshots in a single use of Combat Focus."],
+    ["Combat","Drive-Bys","Drive-by kill 5 enemies in under 1 minute without exiting your vehicle."],
+    ["Combat","Stealth Sniping","Kill 7 unalerted enemies using a scoped sniper rifle without dying or being arrested."],
+    ["Combat","Incendiary","Kill or injure 5 enemies with fire damage in under 15 seconds."],
+    ["Combat","Revolver Headshots","Kill 6 enemies with headshots using a revolver without reloading or switching weapons."],
+    ["Combat","Long-Range Sniping","Kill 3 enemies in under 10 seconds with a scoped sniper rifle from 300 feet."],
+    ["Combat","High Explosive","Kill or injure 8 enemies with explosives in under 20 seconds without taking damage."],
+    ["Criminal","Mugging","Rob 5 pedestrians."],
+    ["Criminal","Stick Ups","Rob 3 stores in a day without dying or being arrested."],
+    ["Criminal","Carjacking","Carjack 3 vehicles and take them to a Pay ’n’ Spray in a day without dying or being arrested."],
+    ["Criminal","Mugging Spree","Steal $500 in cash from pedestrians in a day without dying or being arrested."],
+    ["Criminal","Cop Car Theft","Maintain a wanted level for 5 minutes in a stolen law-enforcement motor vehicle."],
+    ["Criminal","Cop Weapon Theft","Steal a weapon from the trunk of 5 different law-enforcement vehicles without dying or being arrested."],
+    ["Criminal","Stick Up Spree","Rob 2 stores in all 5 counties in under 20 minutes without dying or being arrested."],
+    ["Criminal","Cop Tow","Tow an occupied law-enforcement vehicle for 1 mile without stopping."],
+    ["Criminal","Carjacking Spree","Register or respray a stolen vehicle from 10 different manufacturers at a Pay ’n’ Spray in under 30 minutes without dying or being arrested."],
+    ["Criminal","Carjacking Pro","Earn $100,000 from selling stolen vehicles to any fence or Pay ’n’ Spray in a day without dying or being arrested."],
+    ["Exploration","WAiNK Locations","Scan any 4 landmarks, curiosities, or sculptures with WAiNK."],
+    ["Exploration","Skyscrapers","Climb to the highest point of the 5 tallest skyscrapers in Vice-Dale County."],
+    ["Exploration","Collectible Cards","Find 3 collectible cards in all 5 counties."],
+    ["Exploration","Encyclopedia","Discover 100 animals, vehicles, and weapons."],
+    ["Exploration","Underwater Discoveries","Locate and explore any 25 unusual sights on the ocean floor."],
+    ["Exploration","Rail Tour","Take a 1 mile train ride in each of the 5 counties in a day without skipping."],
+    ["Exploration","Underwater Treasures","Find 85 underwater treasures."],
+    ["Exploration","Black Hole Wrecks","Find all 11 black hole wrecks."],
+    ["Exploration","Road Trip","Drive to every city and town in Leonida in a day without exiting your vehicle except to refuel."],
+    ["Exploration","Helipad Flyovers","Perform a 100-foot or lower flyover of all 41 Vice City and Vice Beach helipads in under 10 minutes."],
+    ["Fitness","Gym Member","Become a member at any gym."],
+    ["Fitness","Foot Travel","Travel 5 miles on foot in a day."],
+    ["Fitness","Pro Cyclist","Cycle 15 miles in a day."],
+    ["Fitness","Pro Swimmer","Swim 3 miles in a day."],
+    ["Fitness","Balanced Workout","Complete a workout on each type of gym equipment in a day."],
+    ["Fitness","Strength Regime","Maintain Strength / Muscle Level 4 with Jason and Lucia simultaneously for 5 consecutive days. PowerPyx names this Strength Regime; GamesRadar calls the stat Muscle Level 4."],
+    ["Fitness","Cardio Regime","Maintain Cardio Level 4 with Jason and Lucia simultaneously for 5 consecutive days."],
+    ["Fitness","Waning Sands Run","Travel from the gate of the Tip pier to Waning Sands on foot in under 13 minutes. PowerPyx also requires not taking damage."],
+    ["Fitness","Tequesta Swim","Swim from Tequesta Retreat to Starfish Island in under 15 minutes."],
+    ["Fitness","Southwind Cycle","Ride a bicycle from Williams Guest House in Grayson to Chicky’s Tiki Bar in Southwind without falling off in under 22 minutes."],
+    ["Shopping","Vehicle Modder","Make 5 modifications to your vehicle using a mod shop."],
+    ["Shopping","Grocery Shopper","Spend over $250 at convenience stores or liquor stores in a day."],
+    ["Shopping","Well Armed","Buy 3 sidearms and 3 longarms from Ammu-Nation."],
+    ["Shopping","Well Groomed","Spend over $1,000 at barbershops, hairdressers, or salons."],
+    ["Shopping","Stylishly Armed","Buy cosmetic upgrades for 5 sidearms and 5 longarms at Ammu-Nation."],
+    ["Shopping","Well Dressed","Spend over $5,000 on clothing."],
+    ["Shopping","Custom Ride","Spend over $20,000 on a single mod shop visit."],
+    ["Shopping","Heavily Armed","Spend over $50,000 at Ammu-Nation (GamesRadar specifies weapons and accessories)."],
+    ["Shopping","Serious Modder","Spend over $125,000 at mod shops."],
+    ["Shopping","Nest Egg","Bank $1,500,000 in your BuckMe checking account."],
+    ["Sports","Basketball Rookie","Score a basketball shot at 3 different hoops in a day."],
+    ["Sports","Golf Rookie","Play 18 holes at either King Gator or Frontier Adventure Golf in under 30 minutes, finishing 3 under par or better."],
+    ["Sports","Basketball Streak","Score 10 basketball shots in a row in under 2 minutes."],
+    ["Sports","Pool Streak","Win a game of pool at 3 different locations in a day without losing or quitting."],
+    ["Sports","Basketball Tour","Score a basketball shot in every county."],
+    ["Sports","Golf Pro","Play 18 holes at both King Gator and Frontier Adventure Golf in a day, finishing at par or better."],
+    ["Sports","Triple Bank","Bank the cue ball off 3 rails before potting a shot."],
+    ["Sports","Basketball Pro","Score a basketball shot at all 100 hoops in Leonida."],
+    ["Sports","8-Ball Break","Win a game of pool by sinking the 8-ball on the break."],
+    ["Sports","Double Hole In One","Get a hole in one twice in a row in a single game at either King Gator or Frontier Adventure Golf."],
+    ["Survival","Alligator Kills","Kill 3 wild alligators."],
+    ["Survival","Big Fish","Catch a fish weighing 20 pounds or more."],
+    ["Survival","Marksman","Earn a medal at both shooting ranges in a day."],
+    ["Survival","Catch of the Day","Catch 3 fish using each type of lure in a day."],
+    ["Survival","Zoologist","Study 20 different animal species."],
+    ["Survival","Angler","Catch 4 different species of fish in under 6 minutes."],
+    ["Survival","Pro Marksman","Earn a gold medal in the Master challenge for 3 different shooting-range events in a row without failing or quitting."],
+    ["Survival","Hunting Spree","Kill a boar, a rattlesnake, and a panther in under 15 minutes without taking damage from enemies or animals."],
+    ["Survival","Pro Angler","Catch every species of fish."],
+    ["Survival","Legendary Hunter","Kill all 8 unique animals. This guide does not invent their names or den locations; use Bret’s decks and the in-game Progress menu."],
+    ["Vehicle","Vehicle Discovery","Examine or discover 6 different vehicles."],
+    ["Vehicle","Wheelie","Perform a wheelie for 0.25 miles."],
+    ["Vehicle","Winning Streak","Get 1st place in any 3 races using a muscle car, a sports car, and a supercar."],
+    ["Vehicle","Throttled","PowerPyx: maintain over 100 mph in a motor vehicle for 2 minutes. GamesRadar: for 2 miles. Check the in-game challenge text and use that."],
+    ["Vehicle","Drawbridge Jump","Jump a vehicle more than 100 feet over a drawbridge 3 times without exiting the vehicle."],
+    ["Vehicle","Top Speed","Hit 175 mph in a car, truck, or on a motorcycle."],
+    ["Vehicle","Train Landing","Touch down a flying airplane on a moving train without destroying the aircraft."],
+    ["Vehicle","Oceanarium Jump","Jump from an aircraft at 0.5 miles or higher and parachute into the Vice City Oceanarium orca or dolphin tank without dying."],
+    ["Vehicle","Rally Winner","Get 3 consecutive 1st-place wins in a single day at Thrillbilly Mud Club, Gellhorn International Raceway, and Boone Speedway without quitting or restarting."],
+    ["Vehicle","Train Jump","Jump a motorcycle 75 feet or more and land on a moving train twice in 20 minutes."]
+  ];
+
+  var TIPS=[
+    ["There is no mission replay","PowerPyx: 15 manual saves and 1 autosave. Keep a save at the start and end of each chapter (10 slots), then rotate the other 5 for free-roam cleanup."],
+    ["Switch characters","Hold D-Pad Right to open the Partner menu; Hold D-Pad Right + R1 / RB to switch. Free switching opens in Chapter 2. Some jobs are Jason-only or Lucia-only (Bret, Yago, Pilot Pete, Andy, Shayna, and parts of Kirk)."],
+    ["Bank your take","Deposit cash in BuckMe. Dying or getting busted can wipe pocket money. Always keep a little cash for snacks, waivers, and quick bribes or taxis if you use them."],
+    ["Work as a couple","Several trophies and better robberies expect both characters: Hot Together, Retail Therapy, carrying multiple duffel bags, and crowd control while the other cracks a safe."],
+    ["Scan and study from hour one","WAiNK vehicles and study animals with binoculars while you explore. Those tallies are slow if you leave them until the end, and they are very generous (200 of 277, 100 of 255)."],
+    ["Optional missions teach systems","Do purple and inverted-color story-adjacent jobs when they pop. They introduce fences, apps, and tools, and they feed the 100 optional-task line."],
+    ["Wanted level with a partner","If the heat is high, stick together. Losing a 4-star level with your partner is its own trophy."],
+    ["Don’t turn on cheats on your main save","Cheats are post-story, each with its own unlock, and they disable saving and trophies for the session. Duplicate a save first."],
+    ["Accessibility is there if you want it","PlayStation lists adjustable challenge, simplified QTEs, game-speed assists, control and tutorial reminders, and the ability to pause during cinematics in offline play. Trophies are not tied to a difficulty mode."],
+    ["100% is not true 100%","You can skip 10 challenges, 3 race-challenge golds, 10 unique races, 25 flamingos, 3 card sets, and a large share of vehicles, weapons, and animals. Focus on full robbery categories, all 39 gang operations, all 33 underwater discoveries, all 42 shooting golds, all 42 drone trials, and all 15 of Bret’s decks."]
+  ];
+
+  var CONTROLS=[
+    ["Open Map","Touch Pad","View"],
+    ["Open Pause Menu","Options","Menu"],
+    ["Show HUD and objectives","D-Pad Down","D-Pad Down"],
+    ["Quick Navigation","Hold D-Pad Down","Hold D-Pad Down"],
+    ["Open Partner Menu","Hold D-Pad Right","Hold D-Pad Right"],
+    ["Switch character (Jason / Lucia)","Hold D-Pad Right + R1","Hold D-Pad Right + RB"],
+    ["Open Radio Menu","Hold D-Pad Left","Hold D-Pad Left"],
+    ["Toggle radio on / off","Double-tap D-Pad Left","Double-tap D-Pad Left"],
+    ["Open phone","D-Pad Up","D-Pad Up"],
+    ["Reject incoming call","Circle","B"],
+    ["Look / turn camera","Right Stick","Right Stick"],
+    ["Look behind","Hold R3","Hold RS"],
+    ["Open loadout wheel","Hold L1","Hold LB"],
+    ["Holster weapon","Tap L1","Tap LB"],
+    ["Focus (slow time, highlight items, track noise)","L3 + R3","LS + RS"],
+    ["Inspect surroundings / first-person inspect (unarmed)","Hold L2 + press R3","Hold LT + press RS"],
+    ["Zoom during inspection","Hold R2","Hold RT"],
+    ["Exit inspection view","Press R3","Press RS"],
+    ["Shoot on foot or while swimming","R2","RT"],
+    ["Shoot from vehicles, aircraft, bikes, parachutes","R1","RB"],
+    ["Melee attack","Square","X"],
+    ["Switch aiming shoulder","D-Pad Left or Right while aiming","Same"],
+    ["Enter / exit first-person weapon sight","R3 while aiming with a sighted weapon","RS while aiming"],
+    ["Quick-swap equipped weapons","Triangle while aiming","Y while aiming"],
+    ["Combat roll / dodge","Hold L2 + Left Stick direction + Cross","Hold LT + Left Stick + A"],
+    ["Chain jump after climbing","Tap Cross right after climbing","Tap A right after climbing"],
+    ["Trick dive into water","Hold Cross near a dock or water’s edge","Hold A near the edge"],
+    ["One-handed handgun shot","Fire R2 without aiming","Fire RT without aiming"],
+    ["Choke out an opponent","Grapple with R2, hold Square + press D-Pad","Grapple with RT, hold X + press D-Pad"],
+    ["Turn signals","D-Pad Left / Right","D-Pad Left / Right"],
+    ["Toggle headlights / high beams","Circle","B"],
+    ["Open vehicle controls menu","Hold D-Pad Left + flick Right Stick up","Same"],
+    ["Exit vehicle with engine running","Double-tap Triangle","Double-tap Y"],
+    ["Duck behind the steering wheel","Hold Circle","Hold B"],
+    ["Road rage / trash-talk nearby drivers","Press R3","Press RS"],
+    ["Slide across a car hood","Sprint toward the car + Cross","Sprint + A"],
+    ["Attack using a car door, or motorcycle / bicycle side kick","Square","X"],
+    ["Motorcycle wheelie","Left Stick down + R2","Left Stick down + RT"],
+    ["Motorcycle stoppie / endo","Left Stick up + L2","Left Stick up + LT"],
+    ["Cinematic driving mode","Hold D-Pad Down + Options","Hold D-Pad Down + Menu"],
+    ["Auto-drive (in cinematic mode)","Hold Circle","Hold B"],
+    ["Toggle minimap in cinematic mode","D-Pad Down","D-Pad Down"],
+    ["Focus on pedestrians while driving","Hold D-Pad Up","Hold D-Pad Up"],
+    ["Horn / manual siren","L3 for horn; Left Stick up for siren","LS for horn; Left Stick up for siren"],
+    ["Cycle emergency siren tones","Hold L3 + Left Stick up","Hold LS + Left Stick up"],
+    ["Deploy parachute","Cross","A"],
+    ["Steer / dive / flare parachute","Left Stick","Left Stick"],
+    ["Sharp parachute turn","Hold L2 or R2","Hold LT or RT"],
+    ["Cut away parachute","Triangle","Y"],
+    ["Retract / deploy aircraft landing gear","Press L3","Press LS"],
+    ["Walk around a moving boat (or leave a vehicle running)","Double-tap Triangle","Double-tap Y"],
+    ["Push a beached jet ski or boat back into the water","Hold L1","Hold LB"],
+    ["Flip someone off (unarmed)","Hold L2 + press R1","Hold LT + press RB"],
+    ["Swap a held object to the other hand","D-Pad Left","D-Pad Left"],
+    ["Flick a lit cigarette forward","Hold R2 while smoking","Hold RT while smoking"],
+    ["Throw a cigarette at someone","Look at them while smoking + R2","Look at them + RT"],
+    ["Ignite a gasoline trail with a lit cigarette","Look at the trail + R2","Look at the trail + RT"],
+    ["Listen to radio on foot","Equip earbuds or headphones from inventory","Same"],
+    ["Rest on railings and ledges","Hold L3","Hold LS"],
+    ["Lean against cars, walls, and docks","Hold Circle","Hold B"],
+    ["Flip an overturned vehicle","Walk into the side of the vehicle","Same"]
+  ];
+
+  var CHEATS=[
+    ["Player","$250,000","Instantly gives you $250,000","Make $250,000 from fenced goods","Up, Right, Down, Left, Up, Left, Down, Right","Confirmed"],
+    ["Player","Drunk","Makes you and your partner drunk","Spend $2,500 on alcohol","Up, Left, Right, Up, Up, Left, Right, Up, Left, Right","Confirmed"],
+    ["Player","Raise Heat Level","Raises your level of heat across the map","Not yet published by Polygon (Nov 21)","Left, Down, Right, Down, Up, Down, Up","Code only"],
+    ["Player","Raise Wanted Level","Raises your wanted level","Lose a 3-star wanted level 50 times","Not yet published","Unlock only"],
+    ["Player","Unlimited Focus","Focus never runs out","Not yet published","Down, Up, Up, Down, Up, Down, Up, Down, Up, Right","Code only"],
+    ["Player","No Fall Damage","Immune to fall damage","Survive a freefall from 40 feet 20 times","Not yet published","Unlock only"],
+    ["Player","Parachute","Adds a parachute to your loadout","Complete 50 skydives or base jumps from 300 feet or higher","Not yet published","Unlock only"],
+    ["Player","Body Armor","Adds body armor to your loadout","Complete 100 workouts","Not yet published","Unlock only"],
+    ["Player","Repair Vehicle","Fully repairs your current vehicle","Get 1st place in 10 races at Gellhorn Raceway, Thrillbilly Mud Club, and Boone Speedway","Not yet published","Unlock only"],
+    ["Player","Unlimited Nitrous","Nitrous and fuel never run out","Complete 50 stunt jumps","Not yet published","Unlock only"],
+    ["Combat","Max Ammo","Fills all ammo","Win 25 bronze medals or higher at shooting ranges","Down, Up, Right, Down, Left, Left, Up, Up, Down, Left","Confirmed"],
+    ["Combat","Infinite Ammo","Ammo never runs out","Win 25 silver medals or higher at shooting ranges","Not yet published","Unlock only"],
+    ["Combat","No Reload","Ammo never runs out and you do not need to reload","Win 25 gold medals at shooting ranges","Not yet published","Unlock only"],
+    ["Combat","All Explosive Weapons","Adds all explosive weapons with full ammo","Throw 100 grenades","Not yet published","Unlock only"],
+    ["Combat","Incendiary Ammo","All ammo is incendiary","Burn 100 enemies with fire damage","Not yet published","Unlock only"],
+    ["Combat","Exploding Bottles","All bottles explode when damaged","Throw 100 Molotovs","Not yet published","Unlock only"],
+    ["Combat","Explosive Shotgun","Adds a Mason & Keen Shortstraw that fires explosive shells","Hit 100 enemies with explosive damage","Not yet published","Unlock only"],
+    ["Combat","Haunters H-AT","Adds a Haunters H-AT to your loadout","Blow up 100 vehicles","Not yet published","Unlock only"],
+    ["Combat","Attack Force","Bullets and melee attacks launch targets","Not yet published","Down, Up, Left, Left, Right, Down, Down, Up, Down","Code only"],
+    ["Combat","Exploding Balls","Sports balls explode on impact","Not yet published","Down, Up, Left, Left, Right, Down, Down, Up, Right","Code only"],
+    ["Combat","Vehicle Force","Vehicle collisions launch targets","Kill 25 enemies with a vehicle","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Interstate Ambulance","Spawns an Interstate Ambulance","Discover the Interstate Ambulance in the Progress menu","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Airboat 09","Spawns an Airboat 09","Complete 5 survival challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Bravado Banshee","Spawns a Bravado Banshee","Complete all combat challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Tuff BMX","Spawns a Tuff BMX","Complete 5 fitness challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Maibatsu Boomazoom","Spawns a Maibatsu Boomazoom","Complete 5 shopping challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Nagasaki Carbon RS","Spawns a Nagasaki Carbon RS","Complete all exploration challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","’65 Vapid Dominator","Spawns a ’65 Vapid Dominator","Complete all fitness challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Progen Emerus","Spawns a Progen Emerus","Complete all vehicle challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Inflatable Flamingo","Spawns an inflatable flamingo","Destroy 50 cocaine flamingos","Not yet published","Unlock only"],
+    ["Spawn Vehicles","MTL Pumper","Spawns an MTL Pumper","Discover the MTL Pumper in the Progress menu","Left, Up, Right, Down, Left, Right, Right, Up","Confirmed"],
+    ["Spawn Vehicles","Vapid Stanier G2 Taxi","Spawns a Vapid Stanier G2 Taxi","Complete 5 sports challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Haunters P-996 LAZER","Spawns a Haunters P-996 LAZER","Complete all challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","HVY Bulldozer","Spawns an HVY Bulldozer","Discover the HVY Bulldozer in the Progress menu","Left, Up, Right, Down, Left, Right, Right, Down","Confirmed"],
+    ["Spawn Vehicles","Lapwing Mallard","Spawns a Lapwing Mallard","Complete 5 vehicle challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Brimstone Golfer","Spawns a Brimstone Golfer","Complete all sports challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Haunters Rhino Tank","Spawns a Haunters Rhino Tank","Complete all survival challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Maibatsu Sanchez","Spawns a Maibatsu Sanchez","Complete 5 criminal challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Nagasaki Sea Sparrow","Spawns a Nagasaki Sea Sparrow","Complete 5 exploration challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Speeder 700 GT","Spawns a Speeder 700 GT","Complete 5 combat challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Truffade Thrax","Spawns a Truffade Thrax","Complete all shopping challenges","Not yet published","Unlock only"],
+    ["Spawn Vehicles","Western Zombie Bobber","Spawns a Western Zombie Bobber","Complete all criminal challenges","Not yet published","Unlock only"],
+    ["Environment","Move Time Forward","Moves the time of day forward","Find 10 collectible watches","Not yet published","Unlock only"],
+    ["Environment","Pause Time of Day","Pauses the current time of day","Find 20 collectible watches","Not yet published","Unlock only"],
+    ["Environment","Cycle Weather","Adjusts the weather","Reveal the entire map","Down, Right, Up, Down, Right, Up, Right","Confirmed"],
+    ["Screen Filters","Golden Hour","Golden filter with a wide aspect ratio","Spend 4 hours holding hands","Not yet published","Unlock only"],
+    ["Screen Filters","Powdered Sugar","Turns the world white with sparkling highlights","Scan all space debris with WAiNK","Not yet published","Unlock only"],
+    ["Screen Filters","Pinhole","Pinhole camera filter","Clear 25 gang operations with your partner","Not yet published","Unlock only"],
+    ["Screen Filters","Neon Jungle","Neon highlights","Discover all 16 Girlypop vehicles","Not yet published","Unlock only"],
+    ["Screen Filters","Yesteryear","Black-and-white CRT filter","Discover the Ridgeway","Not yet published","Unlock only"],
+    ["Screen Filters","Cataclysm","Murky smoke","Discover Martha’s Vamos in the Progress menu","Down, Down, Up, Right, Right, Up, Left, Left, Right, Right","Confirmed"],
+    ["Screen Filters","Videotape","Videotape-style filter","Complete 50 activities with your partner","Not yet published","Unlock only"],
+    ["Screen Filters","Dark Mirror","Flips the world and turns it black","Make $500,000 selling vehicles","Not yet published","Unlock only"],
+    ["Screen Filters","Migraine","Blurred, distorted filter","Survive 6 minutes with a 6-star wanted level","Not yet published","Unlock only"],
+    ["Screen Filters","Dollhouse","Vivid filter with a narrow aspect ratio","Spend 8 hours with your partner","Down, Down, Up, Right, Right, Up, Left, Left, Down, Right","Confirmed"],
+    ["Screen Filters","Bubblegum","Purple and yellow with sparkling highlights","Find all 24 Vice City Flamingos collectible cards","Not yet published","Unlock only"],
+    ["Screen Filters","Fast Forward","Motion blur and faster clouds","Complete 50 meditations","Not yet published","Unlock only"],
+    ["Screen Filters","Fisheye","Fisheye filter","Catch 100 fish","Not yet published","Unlock only"],
+    ["Screen Filters","Faded Glory","Color CRT TV filter","Rob 50 stores with your partner","Not yet published","Unlock only"],
+    ["Screen Filters","Pixel Art","Pixelated filter","Make $250,000 selling collectibles","Not yet published","Unlock only"],
+    ["Screen Filters","Hellscape","Red and orange heat haze","Steal 100 cop vehicles","Not yet published","Unlock only"]
+  ];
+
+  var SOURCES=[
+    ["Rockstar / PlayStation — Out Now", "https://www.rockstargames.com/VI/out-now", "Official launch page: November 19, 2026, PS5 and Xbox Series X|S."],
+    ["Take-Two — GTA VI now available", "https://taketwointeractivesoftwareinc.gcs-web.com/news-releases/news-release-details/rockstar-games-announces-grand-theft-auto-vi-now-available/", "Official launch press release, including storefronts."],
+    ["PlayStation Blog — launches November 19", "https://blog.playstation.com/2026/11/18/grand-theft-auto-vi-launches-tomorrow-november-19/", "Official story synopsis, Jason and Lucia bios, and the six Leonida regions."],
+    ["PlayStation — Grand Theft Auto VI game page", "https://www.playstation.com/en-us/games/grand-theft-auto-vi/", "Official Ultimate Edition item list, price, platforms, and accessibility features."],
+    ["PlayStation Store — Ultimate Edition", "https://store.playstation.com/en-us/product/EP1004-PPSA01547_00-GTAVIULTIMATE001", "Official Ultimate Edition Upgrade copy, including PTT Youngin$ Compound and exclusive shops."],
+    ["Xbox — Ultimate Edition Upgrade", "https://www.xbox.com/en-GB/games/store/grand-theft-auto-vi-ultimate-edition-upgrade/9PN4LLBR8RCH", "Same official bonus list; notes that the base game is sold separately."],
+    ["Take-Two — pre-orders announced", "https://www.take2games.com/ir/news/rockstar-games-announces-pre-orders-grand-theft-auto-vi", "Standard $79.99, Ultimate $99.99, Vintage Vice City Pack, and a free month of GTA+ for qualifying digital pre-orders."],
+    ["PlayStation — GTA+ offer terms", "https://www.playstation.com/en-us/support/games/gta-vi-offer-terms/", "How to claim one month of GTA+; deadline March 31, 2027; Ultimate Edition Upgrade is not eligible on its own."],
+    ["TheGamer — Ultimate unlocks", "https://www.thegamer.com/gta-6-ultimate-edition-exclusive-unlocks-pre-order-bonus-guide-when-how-to-redeem/", "Post-launch chapter-by-chapter unlock locations (Nov 20, 2026)."],
+    ["Dot Esports — Ultimate, pack, and GTA+", "https://dotesports.com/gta/guides/gta-6-ultimate-edition-gta-plus-bonuses", "Post-launch unlock requirements, Vintage Vice City Pack details, and GTA+ benefits (Nov 19, 2026)."],
+    ["PC Gamer — mission list", "https://www.pcgamer.com/games/grand-theft-auto/gta-6-mission-list/", "91 story missions across five chapters (some late names withheld)."],
+    ["PC Gamer — how to make money", "https://www.pcgamer.com/games/grand-theft-auto/gta-6-how-to-make-money/", "Post-launch money methods by activity."],
+    ["PowerPyx — trophy roadmap", "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/", "55 trophies, missable note, save advice, and platinum route."],
+    ["PowerPyx — 100% checklist", "https://www.powerpyx.com/gta-6-100-completion-checklist-guide/", "The 100% requirements used in this guide."],
+    ["PowerPyx — collectible / Progress database", "https://www.powerpyx.com/gta-6-collectible-guide-progress-database/", "Collectible types and counts, vehicle breakdown, robberies, stunts, and 61 cheats."],
+    ["PowerPyx — Strangers & Freaks", "https://www.powerpyx.com/gta-6-all-strangers-freaks-side-missions/", "Side-mission strands, which ones count, and chapter availability."],
+    ["PowerPyx — challenges", "https://www.powerpyx.com/gta-6-all-challenges-guide/", "All 80 challenges in 8 categories."],
+    ["GamesRadar — trophy list", "https://www.gamesradar.com/games/grand-theft-auto/gta-6-trophy-achievement-list/", "Full trophy and achievement list with Gamerscore (Nov 20, 2026)."],
+    ["GamesRadar — all 80 challenges", "https://www.gamesradar.com/games/grand-theft-auto/all-gta-6-challenges/", "Challenge wording used to cross-check PowerPyx (Nov 22, 2026)."],
+    ["Polygon — cheat codes", "https://www.polygon.com/gta-6-cheat-codes-list-unlock/", "How cheats unlock, how to enter them, and the codes published as of Nov 21, 2026."],
+    ["Polygon — easter eggs", "https://www.polygon.com/gta-6-easter-eggs/", "Confirmed secrets used in the Secrets tab (updated Nov 22, 2026)."],
+    ["GameSpot — easter eggs", "https://www.gamespot.com/articles/gta-6-easter-eggs-list-and-locations/", "Additional confirmed secrets (updated Nov 23, 2026)."],
+    ["GameSpot — money", "https://www.gamespot.com/articles/best-ways-to-make-money-fast-in-gta-6/", "Money methods and the Starlet Motel rent stretch."],
+    ["GameSpot — garages", "https://www.gamespot.com/articles/all-garage-locations-and-prices-in-gta-6/", "Garage locations; two prices differ from PowerPyx’s $160,000 total and are flagged in the Property tab."],
+    ["TheGamer — controls", "https://www.thegamer.com/grand-theft-auto-6-gta6-controls-combat-driving-guide/", "PS5 and Xbox control list (Nov 22, 2026)."],
+    ["Push Square — Wyman cars", "https://www.pushsquare.com/guides/gta-6-wymans-classic-car-locations", "Confirmed wreck locations for four Classic Car Collection vehicles (WIP as of Nov 22, 2026)."]
+  ];
+
+  function ultCard(u){
+    var id="ue:"+u.id;
+    return '<div class="card'+(found[id]?" found":"")+'"><div class="top"><div><h4>'+esc(u.name)+'</h4>'+tag(u.cat)+tag(u.ch,"ch")+statusTag(u.status)+'</div>'+cb(id,"Claimed")+'</div><dl><dt>What you get</dt><dd>'+esc(u.get)+'</dd><dt>Where / how</dt><dd>'+esc(u.where)+" "+esc(u.how)+'</dd></dl></div>';
+  }
+  var ultF="All",ultQ="";
+  function renderUlt(){
+    var cats=["All"].concat(Array.from(new Set(ULTIMATE.map(function(u){return u.cat;}))));
+    chips($("ultFilter"),cats.map(function(c){return {v:c,l:c};}),ultF,function(v){ultF=v;renderUlt();});
+    var list=ULTIMATE.filter(function(u){return (ultF==="All"||u.cat===ultF)&&match(ultQ,[u.name,u.cat,u.ch,u.where,u.how,u.get,u.status]);});
+    $("ultCards").innerHTML=list.map(ultCard).join("")||'<p class="empty">Nothing matches.</p>';
+    $("packCards").innerHTML=PACK.map(function(p){var id="pk:"+p.id;return '<div class="card'+(found[id]?" found":"")+'"><div class="top"><div><h4>'+esc(p.name)+'</h4>'+tag(p.ch,"ch")+tag("Pre-order pack","ult")+'</div>'+cb(id,"Claimed")+'</div><dl><dt>What you get</dt><dd>'+esc(p.get)+'</dd><dt>Where / how</dt><dd>'+esc(p.where)+" "+esc(p.how)+'</dd></dl></div>';}).join("");
+    $("gtaPlusCards").innerHTML=GTAPLUS.map(function(g){var id="gp:"+g.id;return '<div class="card'+(found[id]?" found":"")+'"><div class="top"><h4>'+esc(g.name)+'</h4>'+cb(id,"Noted")+'</div><p>'+esc(g.text)+'</p></div>';}).join("");
+  }
+
+  var storyF="All",storyQ="";
+  function mid(ch,i){return "m:"+ch+":"+i;}
+  function renderStory(){
+    var chs=["All"].concat(CHAPTERS.map(function(c){return String(c.num);}));
+    chips($("storyFilter"),chs.map(function(c){return {v:c,l:c==="All"?"All chapters":"Chapter "+c};}),storyF,function(v){storyF=v;renderStory();});
+    var show=$("showSummaries")&&$("showSummaries").checked;
+    var html="";
+    CHAPTERS.forEach(function(c){
+      if(storyF!=="All"&&storyF!==String(c.num))return;
+      var list=MISSIONS.map(function(m,i){return {m:m,i:i};}).filter(function(x){return x.m[0]===c.num&&match(storyQ,[x.m[1],x.m[2],"Chapter "+c.num,c.name]);});
+      if(!list.length)return;
+      html+='<h3>Chapter '+c.num+': '+esc(c.name)+'</h3><p class="note" style="margin-top:0">'+esc(c.trophy)+'</p><div class="card">';
+      html+=list.map(function(x){var m=x.m,id=mid(m[0],x.i),red=!!m[3];return '<div class="row'+(found[id]?" found":"")+'"><div class="t">'+esc(m[1])+(red?" "+tag("Redacted","warn"):"")+(show?'<small>'+esc(m[2])+'</small>':"")+'</div>'+cb(id,"Done")+'</div>';}).join("")+'</div>';
+    });
+    $("storyBody").innerHTML=html||'<p class="empty">Nothing matches.</p>';
+  }
+
+  function renderMap(){
+    $("regionCards").innerHTML=REGIONS.map(function(r){return '<div class="card"><h4>'+esc(r.name)+'</h4><p>'+esc(r.blurb)+'</p><dl><dt>In the game</dt><dd>'+esc(r.notes)+'</dd></dl></div>';}).join("");
+    $("placeCards").innerHTML=PLACES.map(function(p){return '<div class="card"><h4>'+esc(p.name)+'</h4><p>'+esc(p.text)+'</p></div>';}).join("");
+  }
+
+  var sideF="All",sideQ="";
+  function renderSide(){
+    var opts=[{v:"All",l:"All"},{v:"Counts",l:"Counts for S&F"},{v:"Own",l:"Own trophy"},{v:"No",l:"Does not count"},{v:"Open",l:"Unconfirmed"}];
+    chips($("sideFilter"),opts,sideF,function(v){sideF=v;renderSide();});
+    var list=SIDES.filter(function(s){
+      var ok=sideF==="All"||(sideF==="Counts"&&s.count.indexOf("Counts")===0)||(sideF==="Own"&&s.count.indexOf("Own")===0)||(sideF==="No"&&s.count.indexOf("Does not")===0)||(sideF==="Open"&&s.count.indexOf("unconfirmed")>=0);
+      return ok&&match(sideQ,[s.name,s.ch,s.count,s.trophy,s.jobs,s.notes]);
+    });
+    $("sideCards").innerHTML=list.map(function(s){var id="st:"+s.id;var st=s.count.indexOf("Counts")===0?"ok":s.miss?"warn":s.count.indexOf("unconfirmed")>=0?"warn":"";return '<div class="card'+(found[id]?" found":"")+'"><div class="top"><div><h4>'+esc(s.name)+'</h4>'+tag(s.ch)+tag(s.count,st)+(s.miss?tag("Missable","warn"):"")+'</div>'+cb(id,"Completed")+'</div><dl><dt>Jobs</dt><dd>'+esc(s.jobs)+'</dd>'+(s.trophy?'<dt>Trophy</dt><dd>'+esc(s.trophy)+'</dd>':"")+'<dt>Notes</dt><dd>'+esc(s.notes)+'</dd></dl></div>';}).join("")||'<p class="empty">Nothing matches.</p>';
+  }
+
+  var colF="All",colQ="";
+  function renderCol(){
+    var cats=["All"].concat(Array.from(new Set(COLLECT.map(function(c){return c.cat;}))));
+    chips($("colFilter"),cats.map(function(c){return {v:c,l:c};}),colF,function(v){colF=v;renderCol();});
+    var list=COLLECT.filter(function(c){return (colF==="All"||c.cat===colF)&&match(colQ,[c.name,c.cat,c.count,c.need,c.how]);});
+    $("colCards").innerHTML=list.map(function(c){var id="col:"+c.id;return '<div class="card'+(found[id]?" found":"")+'"><div class="top"><div><h4>'+esc(c.name)+'</h4>'+tag(c.cat)+'</div>'+cb(id,"Tracked")+'</div><dl><dt>In the game</dt><dd>'+esc(c.count)+'</dd><dt>For 100% / trophies</dt><dd>'+esc(c.need)+'</dd><dt>How</dt><dd>'+esc(c.how)+'</dd></dl></div>';}).join("")||'<p class="empty">Nothing matches.</p>';
+  }
+
+  function renderVehicles(){
+    $("vehicleIntro").innerHTML='<div class="grid2"><div class="card"><h3>How to keep a car</h3><ul><li>Register it at a Pay ’n’ Spray or, once unlocked, through Moses / Scooter Bros.</li><li>Park it in a garage you own or were given.</li><li>The Scooter Bros app (after Chapter 2’s Moses mission) can deliver registered vehicles to you. Early on Moses only accepts cars without trackers; Chapter 3 lets you register standard-tracker cars at any Pay ’n’ Spray.</li><li>Buying garages adds parking spots so you can register more vehicles (needed for On the Spot: 10 registrations).</li></ul></div><div class="card"><h3>Base models vs Standout</h3><p>Scan base models with WAiNK for the 200/277 discovery line. Standout vehicles are unique cars in fixed locations (280 of them, in categories such as Ultra-Luxe, Street Racer, Girlypop, Leonida Man, and Mudder). They are worth hunting, but they do not count toward that 200. Finding all 16 Girlypop vehicles later unlocks the Neon Jungle cheat.</p></div></div>';
+    var bonus=ULTIMATE.filter(function(u){return u.cat==="Vehicles";}).map(function(u){return '<div class="card"><h4>'+esc(u.name)+'</h4>'+tag("Ultimate","ult")+tag(u.ch,"ch")+'<p>'+esc(u.get)+" "+esc(u.where)+'</p></div>';});
+    bonus.push('<div class="card"><h4>’55 Vapid Stanier</h4>'+tag("Pre-order pack","ult")+tag("Chapter 3","ch")+'<p>Two-tone sedan plus Shore Court garage near Ocean Beach. See the Ultimate tab.</p></div>');
+    bonus.push('<div class="card"><h4>Annis Venturas BLVD Elegy</h4>'+tag("GTA+","ult")+tag("Chapter 3","ch")+'<p>Tuned ’90 widebody plus a Crosstown single-car garage, only while GTA+ is active.</p></div>');
+    $("vehBonusCards").innerHTML=bonus.join("");
+    $("wymanCards").innerHTML=WYMAN.map(function(w){var id="wv:"+w.id;var locs=w.locs.length?'<dt>Wreck locations</dt><dd><ol class="steps">'+w.locs.map(function(l,i){var lid=id+":"+i;return '<li class="'+(found[lid]?"found":"")+'">'+esc(l)+" "+cb(lid,"Scanned")+'</li>';}).join("")+"</ol></dd>":'<dt>Locations</dt><dd>Not published by Push Square as of November 22, 2026.</dd>';return '<div class="card'+(found[id]?" found":"")+'"><div class="top"><div><h4>'+esc(w.name)+'</h4>'+statusTag(w.status)+'</div>'+cb(id,"Restored")+'</div><dl><dt>How</dt><dd>'+esc(w.need)+'</dd>'+locs+'<dt>Notes</dt><dd>'+esc(w.stats)+'</dd></dl></div>';}).join("");
+  }
+
+  function renderWeapons(){
+    $("weaponCards").innerHTML=WEAPON_INFO.map(function(w){var id="wp:"+w.id;return '<div class="card'+(found[id]?" found":"")+'"><div class="top"><h4>'+esc(w.name)+'</h4>'+cb(id,"Noted")+'</div><p>'+esc(w.text)+'</p></div>';}).join("");
+    $("ultWeaponCards").innerHTML=ULTIMATE.filter(function(u){return u.cat==="Weapons";}).map(ultCard).join("");
+  }
+
+  function renderProperty(){
+    $("garageCards").innerHTML=GARAGES.map(function(g){var id="g:"+g.id;return '<div class="card'+(found[id]?" found":"")+'"><div class="top"><div><h4>'+esc(g.name)+'</h4>'+tag(g.price)+(g.buy?tag("Purchasable","ch"):tag("Not a Real Estate purchase"))+statusTag(g.status==="Confirmed price"||g.status==="Confirmed"?"Confirmed":"Reported / unconfirmed")+'</div>'+cb(id,g.buy?"Bought":"Got it")+'</div><dl><dt>Where</dt><dd>'+esc(g.loc)+'</dd><dt>Notes</dt><dd>'+esc(g.note)+'</dd></dl></div>';}).join("");
+    $("moneyBody").innerHTML=MONEY.map(function(m){return '<div class="card"><h3>'+esc(m.t)+'</h3><p>'+esc(m.d)+'</p></div>';}).join("");
+  }
+
+  var secretF="All",secretQ="";
+  function renderSecrets(){
+    var regs=["All"].concat(Array.from(new Set(SECRETS.map(function(s){return s.region;}))));
+    chips($("secretFilter"),regs.map(function(r){return {v:r,l:r};}),secretF,function(v){secretF=v;renderSecrets();});
+    var list=SECRETS.filter(function(s){return (secretF==="All"||s.region===secretF)&&match(secretQ,[s.name,s.region,s.where,s.how,s.src]);});
+    $("secretCards").innerHTML=list.map(function(s){var id="s:"+s.id;return '<div class="card'+(found[id]?" found":"")+'"><div class="top"><div><h4>'+esc(s.name)+'</h4>'+tag(s.region)+tag(s.src)+'</div>'+cb(id)+'</div><dl><dt>Where</dt><dd>'+esc(s.where)+'</dd><dt>How / what you’ll find</dt><dd>'+esc(s.how)+'</dd></dl></div>';}).join("")||'<p class="empty">Nothing matches.</p>';
+  }
+
+  var trophyF="All",trophyQ="";
+  function renderHundred(){
+    var groups=[],map={};
+    HUNDRED.forEach(function(h,i){if(!map[h.g]){map[h.g]=[];groups.push(h.g);}map[h.g].push({h:h,i:i});});
+    $("hundredBody").innerHTML='<div class="grid2">'+groups.map(function(g){return '<div class="card"><h3>'+esc(g)+'</h3>'+map[g].map(function(x){return row("pct:"+x.i,x.h.n,x.h.d);}).join("")+"</div>";}).join("")+"</div>";
+    var cats=["All"].concat(Array.from(new Set(TROPHIES.map(function(t){return t[4];}))));
+    chips($("trophyFilter"),cats.map(function(c){return {v:c,l:c};}),trophyF,function(v){trophyF=v;renderHundred();});
+    var list=TROPHIES.filter(function(t){return (trophyF==="All"||t[4]===trophyF)&&match(trophyQ,t);});
+    $("trophyCards").innerHTML=list.map(function(t,i){var idx=TROPHIES.indexOf(t),id="tr:"+idx;return '<div class="card'+(found[id]?" found":"")+'"><div class="top"><div><h4>'+esc(t[0])+'</h4>'+tag(t[1])+tag(t[2])+tag(t[4])+(t[4]==="Missable"?tag("Potentially missable","warn"):"")+'</div>'+cb(id,"Earned")+'</div><p>'+esc(t[3])+'</p></div>';}).join("")||'<p class="empty">Nothing matches.</p>';
+  }
+
+  var chF="All",chQ="";
+  function renderChallenges(){
+    var cats=["All"].concat(Array.from(new Set(CHALS.map(function(c){return c[0];}))));
+    chips($("chFilter"),cats.map(function(c){return {v:c,l:c};}),chF,function(v){chF=v;renderChallenges();});
+    var list=CHALS.map(function(c,i){return {c:c,i:i};}).filter(function(x){return (chF==="All"||x.c[0]===chF)&&match(chQ,x.c);});
+    var groups=[],map={};
+    list.forEach(function(x){if(!map[x.c[0]]){map[x.c[0]]=[];groups.push(x.c[0]);}map[x.c[0]].push(x);});
+    $("chBody").innerHTML=groups.map(function(g){return '<h3>'+esc(g)+'</h3><div class="card">'+map[g].map(function(x){return row("ch:"+x.i,x.c[1],x.c[2]);}).join("")+"</div>";}).join("")||'<p class="empty">Nothing matches.</p>';
+  }
+
+  var controlQ="",cheatF="All",cheatQ="";
+  function renderTips(){
+    $("tipsBody").innerHTML='<div class="grid2">'+TIPS.map(function(t){return '<div class="card"><h3>'+esc(t[0])+'</h3><p>'+esc(t[1])+'</p></div>';}).join("")+"</div>";
+    var rows=CONTROLS.filter(function(c){return match(controlQ,c);});
+    $("controlTable").innerHTML='<table><thead><tr><th>Action</th><th>PS5</th><th>Xbox</th></tr></thead><tbody>'+rows.map(function(c){return '<tr><td>'+esc(c[0])+'</td><td>'+esc(c[1])+'</td><td>'+esc(c[2])+'</td></tr>';}).join("")+"</tbody></table>";
+  }
+  function renderCheats(){
+    var cats=["All"].concat(Array.from(new Set(CHEATS.map(function(c){return c[0];}))));
+    chips($("cheatFilter"),cats.map(function(c){return {v:c,l:c};}),cheatF,function(v){cheatF=v;renderCheats();});
+    var list=CHEATS.map(function(c,i){return {c:c,i:i};}).filter(function(x){return (cheatF==="All"||x.c[0]===cheatF)&&match(cheatQ,x.c);});
+    $("cheatTable").innerHTML='<table><thead><tr><th></th><th>Cheat</th><th>Effect</th><th>Unlock</th><th>Code</th><th>Status</th></tr></thead><tbody>'+list.map(function(x){var c=x.c,id="cht:"+x.i,st=c[5]==="Confirmed"?"Confirmed":(c[5]==="Code only"?"Code published; unlock TBD":"Unlock known; code TBD");return '<tr class="'+(found[id]?"found":"")+'"><td>'+cb(id,"")+'</td><td>'+esc(c[1])+'</td><td>'+esc(c[2])+'</td><td>'+esc(c[3])+'</td><td>'+(c[4]==="Not yet published"?"—":"<code>"+esc(c[4])+"</code>")+'</td><td>'+st+'</td></tr>';}).join("")+"</tbody></table>";
+  }
+  function renderSources(){
+    $("sourcesBody").innerHTML='<div class="card">'+SOURCES.map(function(s){return '<div class="row"><div class="t"><a href="'+esc(s[1])+'" target="_blank" rel="noopener">'+esc(s[0])+'</a><small>'+esc(s[2])+'</small></div></div>';}).join("")+"</div>";
+  }
+
+  function indexItems(){
+    ITEMS=[];
+    NEXT_STEPS.forEach(function(s){add(null,"start",s[0],s[1]);});
+    ULTIMATE.forEach(function(u){add("ue:"+u.id,"ultimate",u.name,[u.cat,u.ch,u.get,u.where,u.how,u.status].join(" "));});
+    PACK.forEach(function(p){add("pk:"+p.id,"ultimate",p.name,[p.get,p.where,p.how,p.ch].join(" "));});
+    GTAPLUS.forEach(function(g){add("gp:"+g.id,"ultimate",g.name,g.text);});
+    MISSIONS.forEach(function(m,i){add(mid(m[0],i),"story",m[1],"Chapter "+m[0]+". "+m[2]);});
+    REGIONS.forEach(function(r){add(null,"map",r.name,r.blurb+" "+r.notes);});
+    PLACES.forEach(function(p){add(null,"map",p.name,p.text);});
+    SIDES.forEach(function(s){add("st:"+s.id,"side",s.name,[s.ch,s.count,s.jobs,s.notes,s.trophy].join(" "));});
+    COLLECT.forEach(function(c){add("col:"+c.id,"collect",c.name,[c.count,c.need,c.how].join(" "));});
+    WYMAN.forEach(function(w){add("wv:"+w.id,"vehicles",w.name,[w.need,w.stats].concat(w.locs).join(" "));w.locs.forEach(function(l,i){add("wv:"+w.id+":"+i,"vehicles",w.name+" wreck "+(i+1),l);});});
+    WEAPON_INFO.forEach(function(w){add("wp:"+w.id,"weapons",w.name,w.text);});
+    GARAGES.forEach(function(g){add("g:"+g.id,"property",g.name,[g.price,g.loc,g.note].join(" "));});
+    MONEY.forEach(function(m){add(null,"property",m.t,m.d);});
+    SECRETS.forEach(function(s){add("s:"+s.id,"secrets",s.name,[s.region,s.where,s.how,s.src].join(" "));});
+    HUNDRED.forEach(function(h,i){add("pct:"+i,"hundred",h.n,h.g+". "+h.d);});
+    TROPHIES.forEach(function(t,i){add("tr:"+i,"hundred",t[0],[t[1],t[2],t[3],t[4]].join(" "));});
+    CHALS.forEach(function(c,i){add("ch:"+i,"challenges",c[1],c[0]+". "+c[2]);});
+    TIPS.forEach(function(t){add(null,"tips",t[0],t[1]);});
+    CONTROLS.forEach(function(c){add(null,"tips",c[0],c[1]+" / "+c[2]);});
+    CHEATS.forEach(function(c,i){add("cht:"+i,"cheats",c[1],[c[0],c[2],c[3],c[4],c[5]].join(" "));});
+    SOURCES.forEach(function(s){add(null,"sources",s[0],s[2]+" "+s[1]);});
+  }
+
+  function allIds(){return ITEMS.filter(function(i){return i.id;}).map(function(i){return i.id;});}
+  function updateProgress(){
+    var ids=allIds();
+    var n=ids.filter(function(id){return found[id];}).length;
+    $("progText").textContent=n+" / "+ids.length+" tracked";
+    $("progBar").style.width=(ids.length?(100*n/ids.length):0)+"%";
+    TABS.forEach(function(t){
+      if(!t[2])return;
+      var prefs=t[2].split(",");
+      var set=ids.filter(function(id){return prefs.some(function(p){return id.indexOf(p)===0;});});
+      var c=set.filter(function(id){return found[id];}).length;
+      var el=document.querySelector('nav button[data-tab="'+t[0]+'"] span');
+      if(el)el.textContent=" "+c+"/"+set.length;
+    });
+  }
+  function showTab(name){
+    document.body.classList.remove("searching");
+    TABS.forEach(function(t){
+      var sec=$("tab-"+t[0]);
+      if(sec)sec.classList.toggle("active",t[0]===name);
+    });
+    document.querySelectorAll("nav button").forEach(function(b){b.setAttribute("aria-selected",b.getAttribute("data-tab")===name?"true":"false");});
+    try{history.replaceState(null,"","#"+name);}catch(e){}
+  }
+  function doSearch(){
+    var q=$("globalSearch").value.trim().toLowerCase();
+    if(!q){document.body.classList.remove("searching");return;}
+    document.body.classList.add("searching");
+    var words=q.split(/\s+/);
+    var res=ITEMS.filter(function(o){var s=(o.title+" "+o.text).toLowerCase();return words.every(function(w){return s.indexOf(w)>=0;});});
+    $("resultsList").innerHTML=res.length?'<p class="res-tab">'+res.length+' match'+(res.length===1?"":"es")+'</p><div class="card">'+res.slice(0,180).map(function(r){var sub=r.text.length>220?r.text.slice(0,220)+"…":r.text;return '<div class="row'+(r.id&&found[r.id]?" found":"")+'"><div class="t"><span class="res-tab">'+esc(TABNAME[r.tab])+'</span><br>'+esc(r.title)+'<small>'+esc(sub)+'</small><button class="btn small" data-go="'+r.tab+'">Open '+esc(TABNAME[r.tab])+'</button></div>'+(r.id?cb(r.id,"Done"):"")+'</div>';}).join("")+"</div>":'<p class="empty">Nothing matches that search.</p>';
+  }
+  function renderAll(){
+    $("nextSteps").innerHTML=NEXT_STEPS.map(function(s){return "<li><b>"+esc(s[0])+"</b>"+esc(s[1])+"</li>";}).join("");
+    renderUlt();renderStory();renderMap();renderSide();renderCol();renderVehicles();renderWeapons();renderProperty();renderSecrets();renderHundred();renderChallenges();renderTips();renderCheats();renderSources();
+    indexItems();updateProgress();
+    if(document.body.classList.contains("searching"))doSearch();
+  }
+
+  $("nav").innerHTML=TABS.map(function(t){return '<button role="tab" data-tab="'+t[0]+'">'+t[1]+(t[2]?"<span></span>":"")+"</button>";}).join("");
+  $("nav").addEventListener("click",function(e){var b=e.target.closest("[data-tab]");if(b){$("globalSearch").value="";showTab(b.getAttribute("data-tab"));}});
+  document.body.addEventListener("click",function(e){
+    var go=e.target.closest("[data-go]");
+    if(go){$("globalSearch").value="";document.body.classList.remove("searching");showTab(go.getAttribute("data-go"));}
+  });
+  document.body.addEventListener("change",function(e){
+    var t=e.target;
+    if(t && t.getAttribute("data-id")){if(t.checked)found[t.getAttribute("data-id")]=true;else delete found[t.getAttribute("data-id")];save();updateProgress();if(t.closest(".card"))t.closest(".card").classList.toggle("found",t.checked);if(t.closest(".row"))t.closest(".row").classList.toggle("found",t.checked);}
+    if(t && t.id==="showSummaries")renderStory();
+  });
+  $("resetBtn").addEventListener("click",function(){if(confirm("Clear all tracked progress in this browser?")){found={};save();renderAll();}});
+  $("globalSearch").addEventListener("input",doSearch);
+  [["ultSearch",function(v){ultQ=v;renderUlt();}],["storySearch",function(v){storyQ=v;renderStory();}],["sideSearch",function(v){sideQ=v;renderSide();}],["colSearch",function(v){colQ=v;renderCol();}],["secretSearch",function(v){secretQ=v;renderSecrets();}],["trophySearch",function(v){trophyQ=v;renderHundred();}],["chSearch",function(v){chQ=v;renderChallenges();}],["controlSearch",function(v){controlQ=v;renderTips();}],["cheatSearch",function(v){cheatQ=v;renderCheats();}]].forEach(function(p){var el=$(p[0]);if(el)el.addEventListener("input",function(){p[1](el.value);});});
+  renderAll();
+  var start=(location.hash||"#start").replace("#","");
+  showTab(TABS.some(function(t){return t[0]===start;})?start:"start");
+})();
+</script>
+</body>
+</html>
